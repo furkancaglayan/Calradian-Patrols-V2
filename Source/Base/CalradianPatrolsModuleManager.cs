@@ -33,7 +33,6 @@ namespace CalradianPatrols.Base
 
         public CalradianPatrolsModuleManager()
         {
-            Debug.Assert(Current == null);
             Current = this;
         }
 

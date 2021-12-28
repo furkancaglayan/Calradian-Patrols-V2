@@ -260,13 +260,13 @@ namespace CalradianPatrols.Behaviors
         private void BuyFoodForNDays(PatrolPartyComponent component, Settlement settlement, float daysMin, float daysMax)
         {
             var party = component.MobileParty;
-            var dailyFoodConsumption = MBMath.Absf(party.FoodChange);
+            var dailyFoodConsumption = Math.Abs(party.FoodChange);
 
             var days = MBRandom.RandomFloatRanged(daysMin, daysMax);
 
             if (days * dailyFoodConsumption > party.Food)
             {
-                var foodRequirement = MBMath.Ceiling((days * dailyFoodConsumption) - party.Food);
+                var foodRequirement = Math.Ceiling((days * dailyFoodConsumption) - party.Food);
 
                 var cost = 0f;
                 var startIndex = MBRandom.RandomInt(0, settlement.ItemRoster.Count);
@@ -278,10 +278,10 @@ namespace CalradianPatrols.Behaviors
                     if (!itemRosterElement.IsEmpty &&
                         itemRosterElement.EquipmentElement.Item.IsFood)
                     {
-                        var effectiveAmount = Math.Min(itemRosterElement.Amount, foodRequirement);
+                        var effectiveAmount = (float)Math.Min(itemRosterElement.Amount, foodRequirement);
                         cost += settlement.Town.GetItemPrice(itemRosterElement.EquipmentElement.Item) * effectiveAmount;
                         foodRequirement -= effectiveAmount;
-                        party.ItemRoster.AddToCounts(itemRosterElement.EquipmentElement.Item, effectiveAmount);
+                        party.ItemRoster.AddToCounts(itemRosterElement.EquipmentElement.Item, (int)effectiveAmount);
                     }
                 }
 
@@ -665,8 +665,8 @@ namespace CalradianPatrols.Behaviors
                 text.SetTextVariable("SETTLEMENT_NAME", encounterSettlement.EncyclopediaLinkWithName);
             }
 
-            text.SetTextVariable("IS_TODAY", MBMath.Round(encounterTime.ElapsedDaysUntilNow) == 0 ? 1 : 0);
-            text.SetTextVariable("DAYS_AGO", MBMath.Round(encounterTime.ElapsedDaysUntilNow));
+            text.SetTextVariable("IS_TODAY", (int)(encounterTime.ElapsedDaysUntilNow) == 0 ? 1 : 0);
+            text.SetTextVariable("DAYS_AGO", (int)(encounterTime.ElapsedDaysUntilNow));
 
             return text;
         }
@@ -679,7 +679,7 @@ namespace CalradianPatrols.Behaviors
 #endif
             var party = PatrolPartyComponent.CreatePatrolParty("patrol_party_1", settlement, settlement.OwnerClan, template);
 
-            party.InitializeMobileParty(template, settlement.GatePosition, 11, 5);
+            party.InitializeMobilePartyAroundPosition(template, settlement.GatePosition, 11, 5);
 
             DisableThinkForHours(party, MBRandom.RandomFloatRanged(2, 7));
             AddPatrolPartyToSettlement(party, settlement);
@@ -690,7 +690,7 @@ namespace CalradianPatrols.Behaviors
 
         private void AddPatrolPartyToSettlement(MobileParty party, Settlement settlement)
         {
-            Debug.Assert(party.PartyComponent is PatrolPartyComponent);
+            Debug.Assert(party.PartyComponent is PatrolPartyComponent, "Party Component is wrong!");
             _patrols.Set(settlement, party);
             _nextDecisionTimes.Set(party, CampaignTime.Now);
             _partyEncounters.Add(party, new List<PatrolEncounterData>());
@@ -977,7 +977,7 @@ namespace CalradianPatrols.Behaviors
                 text = GameTexts.FindText("str_patrol_party_has_food_text");
             }
 
-            text.SetTextVariable("DAYS", MBMath.Round(foodForDays));
+            text.SetTextVariable("DAYS", (int)(foodForDays));
             var component = (PatrolPartyComponent)MobileParty.ConversationParty.PartyComponent;
             text.SetTextVariable("SETTLEMENT", component.Settlement.Name);
             MBTextManager.SetTextVariable("FOOD_SITUATION", text);
@@ -1380,7 +1380,7 @@ namespace CalradianPatrols.Behaviors
 
                 TroopRoster prisonerRoster = new TroopRoster(party.Party);
 
-                party.InitializeMobileParty(
+                party.InitializeMobilePartyAroundPosition(
                     memberRoster,
                     prisonerRoster,
                     MobileParty.MainParty.Position2D,
