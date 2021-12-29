@@ -42,7 +42,7 @@ namespace CalradianPatrols.Extensions
         public static float GetRemainingFoodInDays(this MobileParty party)
         {
             var food = party.Food;
-            var dailyFoodConsumption = MBMath.Absf(party.FoodChange);
+            var dailyFoodConsumption = MathF.Abs(party.FoodChange);
 
             return food / dailyFoodConsumption;
         }
