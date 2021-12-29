@@ -89,7 +89,7 @@ namespace CalradianPatrols.Behaviors
             CampaignEvents.MobilePartyDestroyed.AddNonSerializedListener(this, OnMobilePartyDestroyed);
             CampaignEvents.MapEventStarted.AddNonSerializedListener(this, OnMapEventStarted);
             CampaignEvents.MapEventEnded.AddNonSerializedListener(this, OnMapEventEnded);
-            CampaignEvents.OnNewGameCreatedPartialFollowUpEndEvent.AddNonSerializedListener(this, OnNewGameCreated);
+            CampaignEvents.OnNewGameCreatedEvent.AddNonSerializedListener(this, OnNewGameCreated);
             CampaignEvents.OnSessionLaunchedEvent.AddNonSerializedListener(this, OnSessionLaunchedEvent);
             CampaignEvents.SettlementEntered.AddNonSerializedListener(this, OnSettlementEntered);
             CampaignEvents.DailyTickSettlementEvent.AddNonSerializedListener(this, DailyTickSettlement);
@@ -145,7 +145,7 @@ namespace CalradianPatrols.Behaviors
 
         private void DailyTickSettlement(Settlement settlement)
         {
-            if (settlement.IsFortification && !settlement.IsUnderSiege && !settlement.InRebelliousState)
+            if (settlement.IsTown && !settlement.IsUnderSiege && !settlement.InRebelliousState)
             {
                 if (settlement.OwnerClan == Clan.PlayerClan)
                 {
