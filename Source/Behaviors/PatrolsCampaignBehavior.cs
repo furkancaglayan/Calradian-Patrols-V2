@@ -98,6 +98,15 @@ namespace CalradianPatrols.Behaviors
             CampaignEvents.ConversationEnded.AddNonSerializedListener(this, OnConversationEnded);
             CampaignEvents.OnSettlementOwnerChangedEvent.AddNonSerializedListener(this, OnSettlementOwnerChanged);
             CampaignEvents.TownRebelliosStateChanged.AddNonSerializedListener(this, TownRebelliosStateChanged);
+            CampaignEvents.OnGameLoadFinishedEvent.AddNonSerializedListener(this, OnGameLoadFinished);
+        }
+
+        private void OnGameLoadFinished()
+        {
+            if (!_autoRecruits.Any())
+            {
+                OnNewGameCreated(null);
+            }
         }
 
         private void TownRebelliosStateChanged(Town town, bool rebelliousState)
@@ -919,6 +928,8 @@ namespace CalradianPatrols.Behaviors
 
         private bool patrol_answer_about_troops_on_condition()
         {
+            if (MobileParty.ConversationParty != null && MobileParty.ConversationParty.PartyComponent is PatrolPartyComponent)
+            {
             var banditPrisonerCount = MobileParty.ConversationParty.PrisonRoster.TotalManCount;
 
             TextObject prisonerStatus;
@@ -939,9 +950,12 @@ namespace CalradianPatrols.Behaviors
             return true;
         }
 
+            return false;
+        }
+
         private bool patrol_ask_party_to_follow_on_condition()
         {
-            if (MobileParty.ConversationParty.PartyComponent is PatrolPartyComponent component)
+            if (MobileParty.ConversationParty != null && MobileParty.ConversationParty.PartyComponent is PatrolPartyComponent component)
             {
                 return component.RulerClan == Clan.PlayerClan && !component.IsFollowingPlayer;
             }
@@ -951,7 +965,7 @@ namespace CalradianPatrols.Behaviors
 
         private bool patrol_ask_party_to_stop_follow_on_condition()
         {
-            if (MobileParty.ConversationParty.PartyComponent is PatrolPartyComponent component)
+            if (MobileParty.ConversationParty != null && MobileParty.ConversationParty.PartyComponent is PatrolPartyComponent component)
             {
                 return component.RulerClan == Clan.PlayerClan && component.IsFollowingPlayer;
             }
@@ -961,6 +975,8 @@ namespace CalradianPatrols.Behaviors
 
         private bool patrol_answer_about_food_on_condition()
         {
+            if (MobileParty.ConversationParty != null && MobileParty.ConversationParty.PartyComponent is PatrolPartyComponent)
+            {
             var foodForDays = MobileParty.ConversationParty.GetRemainingFoodInDays();
             TextObject text;
 
@@ -985,9 +1001,12 @@ namespace CalradianPatrols.Behaviors
             return true;
         }
 
+            return false;
+        }
+
         private void patrol_ask_party_to_stop_follow_on_consequence()
         {
-            if (MobileParty.ConversationParty.PartyComponent is PatrolPartyComponent component)
+            if (MobileParty.ConversationParty != null && MobileParty.ConversationParty.PartyComponent is PatrolPartyComponent component)
             {
                 ClearDecision(MobileParty.ConversationParty, component);
                 PlayerEncounter.LeaveEncounter = true;
@@ -1097,8 +1116,9 @@ namespace CalradianPatrols.Behaviors
 
         private bool patrol_ask_adventures_on_condition()
         {
+            if (MobileParty.ConversationParty != null && MobileParty.ConversationParty.PartyComponent is PatrolPartyComponent component)
+            {
             var encounterList = _partyEncounters[MobileParty.ConversationParty].Where(x => !_currentConversationEncounterDataList.Contains(x));
-            var component = MobileParty.ConversationParty.PartyComponent as PatrolPartyComponent;
 
             if (component.RulerClan != Clan.PlayerClan)
             {
@@ -1129,11 +1149,12 @@ namespace CalradianPatrols.Behaviors
             return true;
         }
 
+            return false;
+        }
+
         private bool patrol_start_talk_on_condition()
         {
-            var party = MobileParty.ConversationParty;
-
-            if (party.PartyComponent is PatrolPartyComponent patrolPartyComponent)
+            if (MobileParty.ConversationParty != null && MobileParty.ConversationParty.PartyComponent is PatrolPartyComponent patrolPartyComponent)
             {
                 TextObject greet;
                 if (patrolPartyComponent.RulerClan == Clan.PlayerClan)
