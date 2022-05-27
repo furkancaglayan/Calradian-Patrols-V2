@@ -1,0 +1,58 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\furka\\Desktop\\Develop\\Patrol Parties\\src\\CalradianPatrolsProject\\CalradianPatrolsV2.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\furka\\Desktop\\Develop\\Patrol Parties\\src\\CalradianPatrolsProject\\CalradianPatrolsV2.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\furka\\Desktop\\Develop\\Patrol Parties\\src\\CalradianPatrolsProject\\CalradianPatrolsV2.csproj",
+        "projectName": "CalradianPatrolsV2",
+        "projectPath": "C:\\Users\\furka\\Desktop\\Develop\\Patrol Parties\\src\\CalradianPatrolsProject\\CalradianPatrolsV2.csproj",
+        "packagesPath": "C:\\Users\\furka\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\furka\\Desktop\\Develop\\Patrol Parties\\src\\CalradianPatrolsProject\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "C:\\Users\\furka\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "Bannerlord.MCM": {
+              "include": "Compile",
+              "target": "Package",
+              "version": "[4.3.16, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

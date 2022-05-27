@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<base xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      type="string">
+  <strings>
+    <string id="str_new_patrol_party_created"
+            text="{=*}New patrol party was assembled around {SETTLEMENT}." />
+    <string id="str_patrol_party_destroyed"
+            text="{=*}One of {SETTLEMENT}'s patrol parties was destroyed by {DESTROYER}." />
+    <string id="str_patrol_party_bandit_encounter"
+            text="{=*}We have encountered some {BANDIT_NAME} {?IS_TODAY}today.{?}{DAYS_AGO} days ago.{\?}{?IS_AROUND_SETTLEMENT} They were roaming around {SETTLEMENT_NAME}.{?}{\?} We {?DEAD_COUNT}lost {DEAD_COUNT} of our men to those damned arseholes{?}didn't lose any men{\?} in that battle.{?WOUNDED_COUNT} Damned {BANDIT_NAME} also wounded {WOUNDED_COUNT} of my guys.{?}{\?}" />
+    <string id="str_patrol_party_caught_bandits_text"
+            text="{=*}We have caught{?COUNT} bandit scums{?} one bandit scum{\?} so far. We will ransom them at {SETTLEMENT}." />
+    <string id="str_patrol_party_didnt_caught_bandits_text"
+            text="{=*}We haven't captured any bandits so far. We are still searching for them." />
+
+    <string id="str_patrol_party_out_of_food_text"
+            text="{=*}We don't even have a day worth of food. We are heading back to {SETTLEMENT}." />
+    <string id="str_patrol_party_low_on_food_text"
+            text="{=*}We have food enough for {DAYS} {?DAYS}days{?}day{\?} worth of food. We will head back to {SETTLEMENT} soon to restock." />
+    <string id="str_patrol_party_has_food_text"
+            text="{=*}We have food enough for {DAYS} {?DAYS}days{?}day{\?} worth of food. We won't be heading back town anytime soon." />
+
+    <string id="str_patrol_party_out_of_food_cant_follow_text"
+            text="{=*}No, we don't have enough food. Do you want us to starve to death?" />
+    <string id="str_patrol_party_out_of_men_cant_follow_text"
+            text="{=*}No, we need to muster more men. We will head back to town." />
+    <string id="str_patrol_party_can_follow_player_text"
+            text="{=*}Lead the way, then." />
+
+    <string id="str_hire_menu_settlement_besieged"
+            text="{=*}The settlement is under siege." />
+    <string id="str_hire_menu_no_garrison"
+            text="{=*}{SETTLEMENT} Garrison is not suitable to muster a patrol party." />
+    <string id="str_hire_menu_has_max_amount_of_parties_text"
+            text="{=*}Settlement has already maximum amounts of patrol parties." />
+    <string id="str_hire_menu_not_enough_renown_text"
+            text="{=*}Your clan needs more recognition before recruiting patrol parties." />
+    <string id="str_hire_menu_settlement_not_owned_text"
+            text="{=*}You don't own this settlement." />
+    <string id="str_hire_menu_not_enough_gold_text"
+            text="{=*}You don't have enough gold." />
+    <string id="str_hire_menu_already_has_party_on_queue_text"
+            text="{=*}There is already one party getting ready at this time." />
+    <string id="str_hire_menu_hire_party_notification_text"
+            text="{=*}A new patrol party will be ready for duty after a day." />
+    <string id="str_hire_menu_title_text"
+            text="{=*}Town Patrol" />
+    <string id="str_hire_menu_description_text"
+            text="{=*}You wanted to hire some extra protection for {SETTLEMENT}. But it'll cost you.{NEWLINE}{CURRENT_PATROL_STATUS}" />
+    <string id="str_hire_menu_title_settlement_party_status"
+            text="{=*}({SETTLEMENT} has {?CURRENT_ACTIVE_COUNT}{CURRENT_ACTIVE_COUNT}{?}no{\?} active patrol parties.){NEWLINE}{?CURRENT_QUEUE_COUNT}(There is one party getting ready.{?}(There are no parties on the queue.{\?})" />
+
+    <string id="str_patrol_party_report_response_negative"
+            text="{=*}Hah, we don't report to you!" />
+    <string id="str_patrol_party_report_response_nothing_else"
+            text="{=*}There is nothing else." />
+    <string id="str_patrol_party_report_response_nothing"
+            text="{=*}We have nothing these days." />
+
+    <string id="str_patrol_party_greet_ruler"
+            text="{=*}Greetings, my {?PLAYER.GENDER}lady{?}lord{\?}. We are patrolling around {SETTLEMENT}." />
+    <string id="str_patrol_party_greet_friendly_lord"
+            text="{=*}{?PLAYER.GENDER}Lady{?}Lord{\?} {PLAYER.LINK}...We'll be on our way if you don't have anything important to say." />
+    <string id="str_patrol_party_greet_neutral"
+            text="{=*}Speak, if you must." />
+    <string id="str_patrol_party_greet_enemy"
+            text="{=*}We don't take place in wars, scum." />
+
+    <string id="str_patrol_party_expenses_paid_text"
+            text="{=*}You paid {GOLD} {GOLD_ICON} for town patrol units' expense." />
+    <string id="str_patrol_party_profit_text"
+            text="{=*}Your town patrol units earned you {GOLD} {GOLD_ICON}." />
+    <string id="str_patrol_party_now_available"
+            text="{=*}You can now hire extra protection for your settlements." />
+
+    <string id="str_patrol_auto_recruit_turn_on"
+            text="{=*}Turn Auto-Recruitment On" />
+    <string id="str_patrol_auto_recruit_turn_off"
+            text="{=*}Turn Auto-Recruitment Off" />
+    <string id="str_patrol_auto_recruit_siege_tooltip"
+            text="{=*}Auto-recruitment won't work when the town is under siege." />
+    <string id="str_patrol_auto_recruit_new"
+            text="{=*}A new patrol party was added to spawn queue of {SETTLEMENT_NAME} through auto-recruitment." />
+    <string id="str_patrol_disband_all"
+            text="{=*}This option disbands all patrolling units and turns of the auto-recruitment." />
+    <string id="str_patrol_cant_disband_queue"
+            text="{=*}You can't disband your units while there is a party on the spawn queue." />
+    <string id="str_patrol_cant_disband_no_units"
+            text="{=*}There are no units to disband." />
+
+	<string id="str_town_security_bonus"
+		    text="{=patrolsecuritybonus}Town Patrol" />
+	<string id="str_select_party_name"
+		    text="{=*}Select Party Name" />
+	<string id="str_settlement_town_patrol"
+			text="{=*}{SETTLEMENT} Town Patrol" />
+
+	<string id="str_invalid_name.0"
+			text="{=*}Party name needs to be between 5 - 50 characters." />
+	<string id="str_invalid_name.1"
+		    text="{=*}Party name contains special characters." />
+	<string id="str_invalid_name.2"
+		    text="{=*}Party name can't start or end with space." />
+	<string id="str_invalid_name.3"
+			text="{=*}Party name cannot contain consecutive white spaces." />
+
+	<string id="str_patrol_name_max_size"
+			text="{=*}Town Patrol party must have at most {MAX_PARTY_SIZE} troops." />
+	<string id="str_patrol_name_min_size"
+			text="{=*}Town Patrol party must have at least {MIN_PARTY_SIZE} troops." />
+
+	  <string id="str_new_patrol_party"
+			  text="{=*}New Patrol Party" />
+
+	  <string id="str_hire_patrol_party_for_gold"
+	          text="{=*}Hire Patrol Party ({GOLD} {GOLD_ICON})" />
+	  <string id="str_hire_patrol_party_for_gold_garrison"
+			  text="{=*}Create Patrol Party from Garrison ({GOLD} {GOLD_ICON})" />
+	  <string id="str_waiting_party_to_become_ready"
+		  	  text="{=*}Waiting for town patrol units to become ready." />
+	  <string id="str_stop_waiting"
+		      text="{=*}Stop waiting" />
+	  <string id="str_disband_all"
+		      text="{=*}Disband all patrolling units" />
+	  <string id="str_wait_until_all_ready"
+		      text="{=*}Wait until patrol units become ready" />
+	  <string id="str_back_to_center"
+		      text="{=*}Back to town center" />
+
+
+	  <string id="str_patrol_greet_player_unpleasant"
+		      text="{=*}So, then? Anything else?" />
+	  <string id="str_player_threatens_neutral_party"
+	          text="{=*}I'm here to deliver you my demands!" />
+	  <string id="str_patrol_party_threatened"
+	          text="{=*}Eh!? What do you mean by that?" />
+	  <string id="str_patrol_party_threatened_answer_1"
+	          text="{=*}You heard me! Stand and fight!" />
+	  <string id="str_patrol_talk_prefight"
+			  text="{=*}You dare challenge us?! We will drink from your skull!" />
+	  <string id="str_patrol_talk_threaten_on_enemy"
+		      text="{=*}You know we are at war!" />
+	  <string id="str_patrol_talk_threaten_on_enemy_answer1"
+		      text="{=*}Hah! Is that so?" />
+	  <string id="str_patrol_talk_prefight"
+		      text="{=*}Surrender or die, scum!" />
+	  <string id="patrol_greet_player_unpleasant"
+		      text="{=*}Never mind, you may leave!" />
+
+	  <string id="str_patrol_talk_report"
+	          text="{=*}Do you have anything to report?" />
+	  <string id="party_talk_about_food"
+	          text="{=*}What's your current situation like?" />
+	  <string id="str_party_follow_main"
+	          text="{=*}Follow me for some time." />
+	  <string id="str_party_follow_main"
+              text="{=*}Follow me for some time." />
+	  <string id="str_party_follow_main_stop"
+              text="{=*}You can stop following me." />
+	  <string id="str_party_go"
+			  text="{=*}We'll go on our way, then." />
+	  <string id="str_change_party_name"
+			  text="{=*}Let's have a look at your name..." />
+	  <string id="str_sure"
+			  text="{=*}Sure..." />
+	  <string id="str_on_my_way"
+			  text="{=*}I'll be on my way." />
+	  <string id="str_never_mind"
+		      text="{=*}Never mind, it's nothing." />
+  </strings>
+</base>

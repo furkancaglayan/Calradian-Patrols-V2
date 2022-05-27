@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "v0V84qa1iTjJaPb0PBPGXeuMM5CkdhUlvdZn9TC1AN8jEjGvnKuP3m+5Wy7rfCkx90eH107G9gP7G5KQuZYUhQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\furka\\Desktop\\Develop\\Patrol Parties\\src\\CalradianPatrolsProject\\CalradianPatrolsV2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\furka\\.nuget\\packages\\bannerlord.mcm\\4.3.16\\bannerlord.mcm.4.3.16.nupkg.sha512",
+    "C:\\Users\\furka\\.nuget\\packages\\lib.harmony\\2.1.1\\lib.harmony.2.1.1.nupkg.sha512"
+  ],
+  "logs": []
+}

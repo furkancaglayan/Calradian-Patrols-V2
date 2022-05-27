@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<partyTemplates>
+  <MBPartyTemplate id="patrol_party_template_tier_1_battania" >
+    <stacks>
+      <PartyTemplateStack min_value="6"
+                          max_value="6"
+                          troop="NPCCharacter.battanian_scout" />
+      <PartyTemplateStack min_value="4"
+                          max_value="4"
+                          troop="NPCCharacter.battanian_trained_warrior" />
+      <PartyTemplateStack min_value="8"
+                          max_value="8"
+                          troop="NPCCharacter.battanian_woodrunner" />	
+      <PartyTemplateStack min_value="8"
+                          max_value="8"
+                          troop="NPCCharacter.battanian_clanwarrior" />
+    </stacks>
+  </MBPartyTemplate>
+
+  <MBPartyTemplate id="patrol_party_template_tier_1_empire" >
+    <stacks>
+      <PartyTemplateStack min_value="6"
+                          max_value="6"
+                          troop="NPCCharacter.imperial_cataphract" />
+      <PartyTemplateStack min_value="4"
+                          max_value="4"
+                          troop="NPCCharacter.imperial_heavy_horseman" />
+      <PartyTemplateStack min_value="6"
+                          max_value="6"
+                          troop="NPCCharacter.imperial_archer" />
+      <PartyTemplateStack min_value="8"
+                          max_value="8"
+                          troop="NPCCharacter.imperial_infantryman" />
+    </stacks>
+  </MBPartyTemplate>
+
+  <MBPartyTemplate id="patrol_party_template_tier_1_aserai" >
+    <stacks>
+      <PartyTemplateStack min_value="4"
+                          max_value="4"
+                          troop="NPCCharacter.aserai_mameluke_heavy_cavalry" />
+      <PartyTemplateStack min_value="5"
+                          max_value="5"
+                          troop="NPCCharacter.aserai_mameluke_cavalry" />
+      <PartyTemplateStack min_value="6"
+                          max_value="6"
+                          troop="NPCCharacter.aserai_footman" />
+      <PartyTemplateStack min_value="8"
+                          max_value="8"
+                          troop="NPCCharacter.aserai_skirmisher" />
+    </stacks>
+  </MBPartyTemplate>
+
+  <MBPartyTemplate id="patrol_party_template_tier_1_sturgia" >
+    <stacks>
+      <PartyTemplateStack min_value="8"
+                          max_value="8"
+                          troop="NPCCharacter.sturgian_horse_raider" />
+      <PartyTemplateStack min_value="5"
+                          max_value="5"
+                          troop="NPCCharacter.sturgian_hardened_brigand" />
+      <PartyTemplateStack min_value="8"
+                          max_value="8"
+                          troop="NPCCharacter.sturgian_warrior" />
+      <PartyTemplateStack min_value="4"
+                          max_value="4"
+                          troop="NPCCharacter.sturgian_woodsman" />
+    </stacks>
+  </MBPartyTemplate>
+
+  <MBPartyTemplate id="patrol_party_template_tier_1_khuzait" >
+    <stacks>
+      <PartyTemplateStack min_value="6"
+                          max_value="6"
+                          troop="NPCCharacter.khuzait_heavy_lancer" />
+      <PartyTemplateStack min_value="6"
+                          max_value="6"
+                          troop="NPCCharacter.khuzait_lancer" />
+      <PartyTemplateStack min_value="6"
+                          max_value="6"
+                          troop="NPCCharacter.khuzait_footman" />
+      <PartyTemplateStack min_value="6"
+                          max_value="6"
+                          troop="NPCCharacter.khuzait_tribal_warrior" />
+    </stacks>
+  </MBPartyTemplate>
+
+  <MBPartyTemplate id="patrol_party_template_tier_1_vlandia" >
+    <stacks>
+      <PartyTemplateStack min_value="7"
+                          max_value="7"
+                          troop="NPCCharacter.vlandian_vanguard" />
+      <PartyTemplateStack min_value="6"
+                          max_value="6"
+                          troop="NPCCharacter.vlandian_swordsman" />
+      <PartyTemplateStack min_value="4"
+                          max_value="4"
+                          troop="NPCCharacter.vlandian_footman" />
+      <PartyTemplateStack min_value="8"
+                          max_value="8"
+                          troop="NPCCharacter.vlandian_levy_crossbowman" />
+    </stacks>
+  </MBPartyTemplate>
+</partyTemplates>

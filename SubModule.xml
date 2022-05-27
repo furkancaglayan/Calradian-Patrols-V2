@@ -1,0 +1,32 @@
+ <Module>
+     <Name value="Calradian Patrols V2"/>
+     <Id value="CalradianPatrolsV2"/>
+     <Version value="v3.0.0"/>
+     <SingleplayerModule value="true"/>
+     <MultiplayerModule value="false"/>
+     <DependedModules>
+         <DependedModule Id="Native" DependentVersion = "e1.7.2.314157"/>
+         <DependedModule Id="SandBoxCore" DependentVersion = "e1.7.2.314157"/>
+         <DependedModule Id="Sandbox" DependentVersion = "e1.7.2.314157"/>
+     </DependedModules>
+     <SubModules>
+         <SubModule>
+             <Name value="CalradianPatrolsV2"/>
+             <DLLName value="CalradianPatrolsV2.dll"/>
+             <SubModuleClassType value="CalradianPatrols.Base.CalradianPatrolsSubModule"/>
+             <Tags>
+                 <Tag key="DedicatedServerType" value="none" />
+                 <Tag key="IsNoRenderModeElement" value="false" />
+             </Tags>
+         </SubModule>
+     </SubModules>
+     <Xmls>
+        <XmlNode>                
+            <XmlName id="partyTemplates" path="PartyTemplates"/>
+            <IncludedGameTypes>
+                <GameType value = "Campaign"/>
+                <GameType value = "CampaignStoryMode"/>
+            </IncludedGameTypes>
+        </XmlNode>  
+     </Xmls>
+ </Module>
