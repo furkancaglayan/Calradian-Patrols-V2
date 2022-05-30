@@ -31,3 +31,7 @@
   <a href="https://www.nexusmods.com/mountandblade2bannerlord/mods/3536" alt="NexusMods Calradian-Patrols-V2">
     <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fnexusmods-downloads-ayuqql60xfxb.runkit.sh%2F%3Ftype%3Dviews%26gameId%3D3174%26modId%3D3536" />
   </a>
+  
+  <img src="https://github.com/furkancaglayan/Calradian-Patrols-V2/cp.png" width="800">
+  </br>
+  <img src="https://github.com/furkancaglayan/Calradian-Patrols-V2/settings.png" width="800">
