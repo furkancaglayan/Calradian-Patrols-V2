@@ -67,13 +67,13 @@ namespace CalradianPatrols.Models
         {
             if (settlement.IsTown)
             {
-                var setting = Settings.GetInstance().PatrolPartyCountPerSettlement;
+                var setting = Settings.GetInstance().PatrolPartyCountPerTown;
                 if (setting == 0)
                 {
-                    return clan.Tier + 1;
+                    return Math.Max(clan.Tier + 1, 1);
                 }
 
-                return Math.Max(setting, 1);
+                return setting;
             }
 
             return 0;
@@ -82,7 +82,7 @@ namespace CalradianPatrols.Models
         public override float GetNPCSettlementHirePatrolPartyChance(Settlement settlement)
         {
             float activePartyCount = CalradianPatrolsModuleManager.Current.PatrolBehaviorInformationProvider.GetActivePatrolPartyCount(settlement);
-            return Math.Max(0.01f, (Settings.GetInstance().BaseAISpawnPartyChange - (activePartyCount * 0.012f)));
+            return Math.Max(0f, (Settings.GetInstance().BaseAISpawnPartyChange - (activePartyCount * 0.012f)));
         }
 
         public override float GetPatrolPartyAggressiveness(MobileParty party)

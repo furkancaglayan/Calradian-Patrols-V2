@@ -12,7 +12,8 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
     <StartAction>Program</StartAction>
     <StartProgram>C:\Program Files %28x86%29\Steam\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.MountAndBlade.Launcher.exe</StartProgram>
-    <StartArguments>/singleplayer _MODULES_%2aNative%2aSandBoxCore%2aCustomBattle%2aSandBox%2aStoryMode%2aCalradianPatrolsV2%2a_MODULES_</StartArguments>
+    <StartArguments>
+    </StartArguments>
     <StartWorkingDirectory>C:\Program Files %28x86%29\Steam\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\</StartWorkingDirectory>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'PATROL_TEST|AnyCPU'">

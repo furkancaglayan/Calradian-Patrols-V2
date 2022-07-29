@@ -131,7 +131,7 @@ namespace CalradianPatrols.Behaviors
         {
             if (clan == Clan.PlayerClan && clan.Tier == Model.MinimumTierForPatrolParties && clan.Settlements.Any(x => x.IsTown))
             {
-                InformationManager.AddQuickInformation(GameTexts.FindText("str_patrol_party_now_available"));
+                MBInformationManager.AddQuickInformation(GameTexts.FindText("str_patrol_party_now_available"));
             }
         }
 
@@ -173,7 +173,7 @@ namespace CalradianPatrols.Behaviors
 
         private void DailyTickSettlement(Settlement settlement)
         {
-           
+
         }
 
         private void HourlyTickSettlement(Settlement settlement)
@@ -607,7 +607,7 @@ namespace CalradianPatrols.Behaviors
                         var text = GameTexts.FindText("str_patrol_party_destroyed");
                         text.SetTextVariable("SETTLEMENT", component.Settlement.Name);
                         text.SetTextVariable("DESTROYER", destroyerParty.Name);
-                        InformationManager.AddQuickInformation(text);
+                        MBInformationManager.AddQuickInformation(text);
                     }
                 }
             }
@@ -715,7 +715,7 @@ namespace CalradianPatrols.Behaviors
             int maxTroops = Model.Tier1PatrolPartyIdealSize + 3;
 
             var rand = MBRandom.RandomInt(minTroops, maxTroops);
-            
+
             // try to get 5 to 10 cavs
             int cavAmount = MBRandom.RandomInt(5, 10);
             var cavTroops = troopTree.Where(x => x.IsMounted).ToList();
@@ -1039,25 +1039,25 @@ namespace CalradianPatrols.Behaviors
         {
             if (MobileParty.ConversationParty != null && MobileParty.ConversationParty.PartyComponent is PatrolPartyComponent)
             {
-            var banditPrisonerCount = MobileParty.ConversationParty.PrisonRoster.TotalManCount;
+                var banditPrisonerCount = MobileParty.ConversationParty.PrisonRoster.TotalManCount;
 
-            TextObject prisonerStatus;
+                TextObject prisonerStatus;
 
-            if (banditPrisonerCount > 1)
-            {
-                prisonerStatus = GameTexts.FindText("str_patrol_party_caught_bandits_text");
+                if (banditPrisonerCount > 1)
+                {
+                    prisonerStatus = GameTexts.FindText("str_patrol_party_caught_bandits_text");
+                }
+                else
+                {
+                    prisonerStatus = GameTexts.FindText("str_patrol_party_didnt_caught_bandits_text");
+                }
+
+                var component = MobileParty.ConversationParty.PartyComponent as PatrolPartyComponent;
+
+                MBTextManager.SetTextVariable("TROOP_SITUATION", prisonerStatus);
+                MBTextManager.SetTextVariable("SETTLEMENT", component.Settlement.Name);
+                return true;
             }
-            else
-            {
-                prisonerStatus = GameTexts.FindText("str_patrol_party_didnt_caught_bandits_text");
-            }
-
-            var component = MobileParty.ConversationParty.PartyComponent as PatrolPartyComponent;
-
-            MBTextManager.SetTextVariable("TROOP_SITUATION", prisonerStatus);
-            MBTextManager.SetTextVariable("SETTLEMENT", component.Settlement.Name);
-            return true;
-        }
 
             return false;
         }
@@ -1109,29 +1109,29 @@ namespace CalradianPatrols.Behaviors
         {
             if (MobileParty.ConversationParty != null && MobileParty.ConversationParty.PartyComponent is PatrolPartyComponent)
             {
-            var foodForDays = MobileParty.ConversationParty.GetRemainingFoodInDays();
-            TextObject text;
+                var foodForDays = MobileParty.ConversationParty.GetRemainingFoodInDays();
+                TextObject text;
 
-            if (foodForDays <= 1)
-            {
-                text = GameTexts.FindText("str_patrol_party_out_of_food_text");
+                if (foodForDays <= 1)
+                {
+                    text = GameTexts.FindText("str_patrol_party_out_of_food_text");
 
-            }
-            else if (foodForDays < 3f)
-            {
-                text = GameTexts.FindText("str_patrol_party_low_on_food_text");
-            }
-            else
-            {
-                text = GameTexts.FindText("str_patrol_party_has_food_text");
-            }
+                }
+                else if (foodForDays < 3f)
+                {
+                    text = GameTexts.FindText("str_patrol_party_low_on_food_text");
+                }
+                else
+                {
+                    text = GameTexts.FindText("str_patrol_party_has_food_text");
+                }
 
-            text.SetTextVariable("DAYS", (int)(foodForDays));
-            var component = (PatrolPartyComponent)MobileParty.ConversationParty.PartyComponent;
-            text.SetTextVariable("SETTLEMENT", component.Settlement.Name);
-            MBTextManager.SetTextVariable("FOOD_SITUATION", text);
-            return true;
-        }
+                text.SetTextVariable("DAYS", (int)(foodForDays));
+                var component = (PatrolPartyComponent)MobileParty.ConversationParty.PartyComponent;
+                text.SetTextVariable("SETTLEMENT", component.Settlement.Name);
+                MBTextManager.SetTextVariable("FOOD_SITUATION", text);
+                return true;
+            }
 
             return false;
         }
@@ -1227,8 +1227,8 @@ namespace CalradianPatrols.Behaviors
         {
             args.optionLeaveType = GameMenuOption.LeaveType.Recruit;
 
-            if (Settlement.CurrentSettlement.Town?.GarrisonParty != null && 
-                Settlement.CurrentSettlement.Town.GarrisonParty.MemberRoster?.TotalHealthyCount > 0 )
+            if (Settlement.CurrentSettlement.Town?.GarrisonParty != null &&
+                Settlement.CurrentSettlement.Town.GarrisonParty.MemberRoster?.TotalHealthyCount > 0)
             {
                 return game_menu_town_hire_patrol_basic_on_common_condition(args);
             }
@@ -1275,7 +1275,7 @@ namespace CalradianPatrols.Behaviors
             if (rightMemberRoster.TotalManCount > Model.MaximumCustomGarrisonPartySize)
             {
                 MBTextManager.SetTextVariable("MAX_PARTY_SIZE", Model.MaximumCustomGarrisonPartySize);
-                return new Tuple<bool, TextObject>(false, GameTexts.FindText("str_patrol_name_max_size")) ;
+                return new Tuple<bool, TextObject>(false, GameTexts.FindText("str_patrol_name_max_size"));
             }
             else if (rightMemberRoster.TotalManCount < Model.MinimumCustomGarrisonPartySize)
             {
@@ -1329,7 +1329,7 @@ namespace CalradianPatrols.Behaviors
                     InformationManager.ShowTextInquiry(changeClanNameInquiry);
                 }
             }
-           
+
         }
 
         private void NamingPartyIsDone(string name)
@@ -1382,7 +1382,7 @@ namespace CalradianPatrols.Behaviors
             AddToSpawnQueue(Settlement.CurrentSettlement);
 
             var text = GameTexts.FindText("str_hire_menu_hire_party_notification_text");
-            InformationManager.AddQuickInformation(text);
+            MBInformationManager.AddQuickInformation(text);
             GameMenu.SwitchToMenu("hire_patrol_option_main_menu");
         }
 
@@ -1404,36 +1404,36 @@ namespace CalradianPatrols.Behaviors
         {
             if (MobileParty.ConversationParty != null && MobileParty.ConversationParty.PartyComponent is PatrolPartyComponent component)
             {
-            var encounterList = _partyEncounters[MobileParty.ConversationParty].Where(x => !_currentConversationEncounterDataList.Contains(x));
+                var encounterList = _partyEncounters[MobileParty.ConversationParty].Where(x => !_currentConversationEncounterDataList.Contains(x));
 
-            if (component.RulerClan != Clan.PlayerClan)
-            {
-                MBTextManager.SetTextVariable("PARTY_ADVENTURES", GameTexts.FindText("str_patrol_party_report_response_negative"));
-            }
-            else
-            {
-                if (encounterList.IsEmpty())
+                if (component.RulerClan != Clan.PlayerClan)
                 {
-                    if (_partyEncounters[MobileParty.ConversationParty].Any())
-                    {
-                        MBTextManager.SetTextVariable("PARTY_ADVENTURES", GameTexts.FindText("str_patrol_party_report_response_nothing_else"));
-                    }
-                    else
-                    {
-                        MBTextManager.SetTextVariable("PARTY_ADVENTURES", GameTexts.FindText("str_patrol_party_report_response_nothing"));
-                    }
+                    MBTextManager.SetTextVariable("PARTY_ADVENTURES", GameTexts.FindText("str_patrol_party_report_response_negative"));
                 }
                 else
                 {
-                    var selected = encounterList.GetRandomElementInefficiently();
-                    _currentConversationEncounterDataList.Add(selected);
+                    if (encounterList.IsEmpty())
+                    {
+                        if (_partyEncounters[MobileParty.ConversationParty].Any())
+                        {
+                            MBTextManager.SetTextVariable("PARTY_ADVENTURES", GameTexts.FindText("str_patrol_party_report_response_nothing_else"));
+                        }
+                        else
+                        {
+                            MBTextManager.SetTextVariable("PARTY_ADVENTURES", GameTexts.FindText("str_patrol_party_report_response_nothing"));
+                        }
+                    }
+                    else
+                    {
+                        var selected = encounterList.GetRandomElementInefficiently();
+                        _currentConversationEncounterDataList.Add(selected);
 
-                    MBTextManager.SetTextVariable("PARTY_ADVENTURES", GetEncounterText(selected));
+                        MBTextManager.SetTextVariable("PARTY_ADVENTURES", GetEncounterText(selected));
+                    }
                 }
-            }
 
-            return true;
-        }
+                return true;
+            }
 
             return false;
         }
@@ -1474,7 +1474,7 @@ namespace CalradianPatrols.Behaviors
         [GameMenuInitializationHandler("hire_patrol_option_main_menu")]
         private static void game_menu_hire_init_general(MenuCallbackArgs args)
         {
-            args.MenuContext.SetBackgroundMeshName(Settlement.CurrentSettlement.GetComponent<SettlementComponent>().WaitMeshName);
+            args.MenuContext.SetBackgroundMeshName(Settlement.CurrentSettlement.SettlementComponent.WaitMeshName);
         }
 
         private void town_hire_menu_init(MenuCallbackArgs args)
@@ -1627,13 +1627,39 @@ namespace CalradianPatrols.Behaviors
             for (int i = 0; i < 5; i++)
             {
                 var party = behavior.CreatePatrolPartyWithTemplate(Town.AllTowns.GetRandomElement().Settlement);
-                party.Position2D = Helpers.MobilePartyHelper.FindReachablePointAroundPosition(party.Party, MobileParty.MainParty.Position2D, 3, 1);
+                party.Position2D = Helpers.MobilePartyHelper.FindReachablePointAroundPosition(MobileParty.MainParty.Position2D, 3, 1);
                 behavior.DisableThinkForHours(party, 25);
             }
 
             return "OK";
         }
 
+        [CommandLineFunctionality.CommandLineArgumentFunction("remove_all", "manhunters")]
+        public static string RemoveAll(List<string> strings)
+        {
+            var behavior = Campaign.Current.GetCampaignBehavior<PatrolsCampaignBehavior>();
+            if (behavior != null)
+            {
+                behavior._autoRecruits.Clear();
+                behavior._clanTiers.Clear();
+                behavior._nextDecisionTimes.Clear();
+                behavior._spawnQueues.Clear();
+                behavior._partyEncounters.Clear();
+                behavior._currentConversationEncounterDataList.Clear();
+
+                foreach (var settlement in behavior._patrols.Keys)
+                {
+                    for (int i = behavior._patrols[settlement].Count - 1; i >= 0; i--)
+                    {
+                        var party = behavior._patrols[settlement][i];
+                        DestroyPartyAction.Apply(null, party);
+                    }
+                }
+
+                behavior._patrols.Clear();
+            }
+            return "OK";
+        }
         [CommandLineFunctionality.CommandLineArgumentFunction("spawn_patrol_parties_for_settlement", "manhunters")]
         public static string SpawnPatrolPartiesForSettlement(List<string> strings)
         {

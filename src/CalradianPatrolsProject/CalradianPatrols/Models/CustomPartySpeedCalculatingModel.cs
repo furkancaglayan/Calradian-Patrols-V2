@@ -20,6 +20,10 @@ namespace CalradianPatrols.Models
             _baseModel = campaignGameStarter.GetModelByType<PartySpeedModel>();
         }
 
+        public override float BaseSpeed => _baseModel.BaseSpeed;
+        public override float MinimumSpeed => _baseModel.MinimumSpeed;
+
+
         public override ExplainedNumber CalculateFinalSpeed(MobileParty mobileParty, ExplainedNumber finalSpeed)
         {
             var baseSpeed = _baseModel.CalculateFinalSpeed(mobileParty, finalSpeed);
@@ -31,9 +35,9 @@ namespace CalradianPatrols.Models
             return baseSpeed;
         }
 
-        public override ExplainedNumber CalculatePureSpeed(MobileParty party, bool includeDescriptions = false, int additionalTroopOnFootCount = 0, int additionalTroopOnHorseCount = 0)
+        public override ExplainedNumber CalculateBaseSpeed(MobileParty party, bool includeDescriptions = false, int additionalTroopOnFootCount = 0, int additionalTroopOnHorseCount = 0)
         {
-            return _baseModel.CalculatePureSpeed(party, includeDescriptions, additionalTroopOnFootCount, additionalTroopOnHorseCount);
+            return _baseModel.CalculateBaseSpeed(party, includeDescriptions, additionalTroopOnFootCount, additionalTroopOnHorseCount);
         }
     }
 }

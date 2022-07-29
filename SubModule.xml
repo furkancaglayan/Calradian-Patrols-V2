@@ -1,13 +1,13 @@
  <Module>
      <Name value="Calradian Patrols V2"/>
      <Id value="CalradianPatrolsV2"/>
-     <Version value="v3.0.0"/>
+     <Version value="v3.0.1"/>
      <SingleplayerModule value="true"/>
      <MultiplayerModule value="false"/>
      <DependedModules>
-         <DependedModule Id="Native" DependentVersion = "e1.7.2.314157"/>
-         <DependedModule Id="SandBoxCore" DependentVersion = "e1.7.2.314157"/>
-         <DependedModule Id="Sandbox" DependentVersion = "e1.7.2.314157"/>
+         <DependedModule Id="Native" DependentVersion = "e1.8.0.318937"/>
+         <DependedModule Id="SandBoxCore" DependentVersion = "e1.8.0.318937"/>
+         <DependedModule Id="Sandbox" DependentVersion = "e1.8.0.318937"/>
      </DependedModules>
      <SubModules>
          <SubModule>
@@ -28,5 +28,12 @@
                 <GameType value = "CampaignStoryMode"/>
             </IncludedGameTypes>
         </XmlNode>  
+		<XmlNode>                
+			<XmlName id="GameText" path="module_strings"/>
+			<IncludedGameTypes>
+				<GameType value = "Campaign"/>
+				<GameType value = "CampaignStoryMode"/>
+			</IncludedGameTypes>
+		</XmlNode>
      </Xmls>
  </Module>

@@ -160,7 +160,7 @@ namespace CalradianPatrols.Components
 
         private void Disband()
         {
-            DisbandPartyAction.ApplyDisband(MobileParty);
+            DisbandPartyAction.StartDisband(MobileParty);
         }
 
         private void EngageBanditParty(MobileParty party)

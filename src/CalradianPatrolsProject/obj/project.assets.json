@@ -148,11 +148,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\furka\\Desktop\\Develop\\Patrol Parties\\src\\CalradianPatrolsProject\\CalradianPatrolsV2.csproj",
+      "projectUniqueName": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Mount & Blade II Bannerlord\\Modules\\Calradian-Patrols-V2\\src\\CalradianPatrolsProject\\CalradianPatrolsV2.csproj",
       "projectName": "CalradianPatrolsV2",
-      "projectPath": "C:\\Users\\furka\\Desktop\\Develop\\Patrol Parties\\src\\CalradianPatrolsProject\\CalradianPatrolsV2.csproj",
+      "projectPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Mount & Blade II Bannerlord\\Modules\\Calradian-Patrols-V2\\src\\CalradianPatrolsProject\\CalradianPatrolsV2.csproj",
       "packagesPath": "C:\\Users\\furka\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\furka\\Desktop\\Develop\\Patrol Parties\\src\\CalradianPatrolsProject\\obj\\",
+      "outputPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Mount & Blade II Bannerlord\\Modules\\Calradian-Patrols-V2\\src\\CalradianPatrolsProject\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [

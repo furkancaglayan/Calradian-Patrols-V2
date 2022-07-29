@@ -1,3 +1,4 @@
-Version: 3.0.0
-Game Version: e1.7.2.314157
-- Added Mod Configuration Menu support. 
+Version: 3.0.1
+Game Version: e1.8.0
+- Added a console command to remove all parties from game. "manhunters.remove_all". This should presumably make it easy to remove the mod.
+- Fixed parties spawning even with %0 chance.
