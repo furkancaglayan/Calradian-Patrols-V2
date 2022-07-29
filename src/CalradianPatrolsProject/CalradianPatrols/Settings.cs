@@ -41,8 +41,7 @@ namespace CalradianPatrolsV2.CalradianPatrols
         [SettingPropertyFloatingInteger("{=str_calradianpatrols_settings_5_0}Patrol Party Count per Town", 0f, 100f, "0", Order = 0, RequireRestart = true, HintText = "{=str_calradianpatrols_settings_5_1}Patrol Party Count - Higher values may drain performance.")]
         [SettingPropertyGroup("{=str_calradianpatrols_settings_basic}Calradian Patrols - Basic", GroupOrder = 0)]
         public int PatrolPartyCountPerTown { get; set; } = 8;
-        [SettingPropertyFloatingInteger("{=str_calradianpatrols_settings_12_0}Patrol Party Count per Castle", 0f, 100f, "0", Order = 0, RequireRestart = false, HintText = "{=str_calradianpatrols_settings_12_1}Patrol Party Count for castles - Higher values may drain performance.")]
-        [SettingPropertyGroup("{=str_calradianpatrols_settings_basic}Calradian Patrols - Basic", GroupOrder = 0)]
+        [SettingPropertyFloatingInteger("{=str_calradianpatrols_settings_6_0}Tier Requirement to Hire Parties", 0f, 6f, "0", Order = 0, RequireRestart = false, HintText = "{=str_calradianpatrols_settings_6_1}Minimum Clan Tier Hire Patrol Parties")]
         public int PatrolPartiesTierRequirement { get; set; } = 2;
         [SettingPropertyFloatingInteger("{=str_calradianpatrols_settings_7_0}Base Spawn Chance for AI", 0f, 1f, "0%", Order = 0, RequireRestart = false, HintText = "{=str_calradianpatrols_settings_7_1}Base chance to spawn a patrol party for AI. Higher values my drain performance")]
         [SettingPropertyGroup("{=str_calradianpatrols_settings_basic}Calradian Patrols - Basic", GroupOrder = 0)]
