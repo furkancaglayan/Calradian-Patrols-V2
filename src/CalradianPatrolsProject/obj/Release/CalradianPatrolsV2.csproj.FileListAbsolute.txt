@@ -24,3 +24,8 @@ C:\Program Files (x86)\Steam\steamapps\common\Mount & Blade II Bannerlord\Module
 C:\Program Files (x86)\Steam\steamapps\common\Mount & Blade II Bannerlord\Modules\Calradian-Patrols-V2\src\CalradianPatrolsProject\obj\Release\CalradianPatrolsV2.csproj.CopyComplete
 C:\Program Files (x86)\Steam\steamapps\common\Mount & Blade II Bannerlord\Modules\Calradian-Patrols-V2\bin\Win64_Shipping_Client\CalradianPatrolsV2.dll
 C:\Program Files (x86)\Steam\steamapps\common\Mount & Blade II Bannerlord\Modules\Calradian-Patrols-V2\bin\Win64_Shipping_Client\CalradianPatrolsV2.pdb
+C:\Program Files (x86)\Steam\steamapps\common\Mount & Blade II Bannerlord\Modules\CalradianPatrolsV2\src\CalradianPatrolsProject\obj\Release\CalradianPatrolsV2.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\Mount & Blade II Bannerlord\Modules\CalradianPatrolsV2\src\CalradianPatrolsProject\obj\Release\CalradianPatrolsV2.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\Mount & Blade II Bannerlord\Modules\CalradianPatrolsV2\src\CalradianPatrolsProject\obj\Release\CalradianPatrolsV2.csproj.CopyComplete
+C:\Program Files (x86)\Steam\steamapps\common\Mount & Blade II Bannerlord\Modules\CalradianPatrolsV2\src\CalradianPatrolsProject\obj\Release\CalradianPatrolsV2.dll
+C:\Program Files (x86)\Steam\steamapps\common\Mount & Blade II Bannerlord\Modules\CalradianPatrolsV2\src\CalradianPatrolsProject\obj\Release\CalradianPatrolsV2.pdb

@@ -5,6 +5,7 @@ using System;
 using CalradianPatrolsV2.CalradianPatrols;
 using TaleWorlds.CampaignSystem.Settlements;
 using TaleWorlds.CampaignSystem.Party;
+using TaleWorlds.Core;
 
 namespace CalradianPatrols.Models
 {
@@ -16,7 +17,7 @@ namespace CalradianPatrols.Models
         public override int Tier1PatrolPartyIdealSize => Settings.GetInstance().AveragePartySize;
         public override int MaximumCustomGarrisonPartySize => Settings.GetInstance().MaxPartySizeFromGarrison;
         public override int MinimumCustomGarrisonPartySize => 12;
-        public override float GetAttackScoreforBanditParty(MobileParty party, PatrolPartyComponent patrolPartyComponent, MobileParty banditParty)
+        public override float GetAttackScoreForParty(MobileParty party, PatrolPartyComponent patrolPartyComponent, MobileParty banditParty)
         {
             var aggressiveness = GetPatrolPartyAggressiveness(party);
             var strengthFactor = Math.Max(banditParty.GetTotalStrengthWithFollowers() - party.Party.TotalStrength, 0f);
@@ -82,7 +83,24 @@ namespace CalradianPatrols.Models
         public override float GetNPCSettlementHirePatrolPartyChance(Settlement settlement)
         {
             float activePartyCount = CalradianPatrolsModuleManager.Current.PatrolBehaviorInformationProvider.GetActivePatrolPartyCount(settlement);
-            return Math.Max(0f, (Settings.GetInstance().BaseAISpawnPartyChange - (activePartyCount * 0.012f)));
+            if (activePartyCount >= Settings.GetInstance().PatrolPartyCountPerTown)
+            {
+                return 0.0f;
+            }
+
+            var baseChance = Settings.GetInstance().BaseAISpawnPartyChance;
+            if (settlement.IsFortification && settlement.Town.Governor != null)
+            {
+                var skill = settlement.Town.Governor.GetSkillValue(DefaultSkills.Steward);
+                var governorBonusSkill = ((int)(skill / 100f)) / 10f;
+                if (governorBonusSkill >= 0f)
+                {
+                    baseChance += governorBonusSkill;
+                }
+            }
+
+
+            return Math.Max(0f, (baseChance - (activePartyCount * 0.01f)));
         }
 
         public override float GetPatrolPartyAggressiveness(MobileParty party)

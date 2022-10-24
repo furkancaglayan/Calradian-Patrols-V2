@@ -396,3 +396,8 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+src/CalradianPatrolsProject/obj/Release/DesignTimeResolveAssemblyReferencesInput.cache
+src/.vs/CalradianPatrolsV2/v16/.suo
+src/.vs/CalradianPatrolsV2/v16/.suo
+src/CalradianPatrolsProject/obj/Debug/CalradianPatrolsV2.csproj.AssemblyReference.cache
+src/.vs/CalradianPatrolsV2/v16/.suo

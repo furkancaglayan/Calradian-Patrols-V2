@@ -201,7 +201,7 @@ namespace CalradianPatrols.Behaviors
 
         private void TrySpawnPartyForSettlement(Settlement settlement, bool gameStart)
         {
-            if (settlement.IsTown && settlement.OwnerClan != Clan.PlayerClan && !settlement.IsUnderSiege && !settlement.InRebelliousState)
+            if (!Settings.GetInstance().DisableSpawnsForAI && settlement.IsTown && settlement.OwnerClan != Clan.PlayerClan && !settlement.IsUnderSiege && !settlement.InRebelliousState)
             {
                 var cost = Model.GetGoldCostForPatrolParty(settlement);
 
@@ -534,7 +534,7 @@ namespace CalradianPatrols.Behaviors
             {
                 foreach (var mobileParty in partiesAround)
                 {
-                    if (mobileParty.IsBandit && mobileParty.IsActive && mobileParty.CurrentSettlement == null)
+                    if (mobileParty.IsBandit && mobileParty.IsActive && mobileParty.CurrentSettlement == null && !mobileParty.IsCurrentlyUsedByAQuest)
                     {
                         if (mobileParty.MapEvent != null &&
                             mobileParty.MapEvent.EventType == MapEvent.BattleTypes.FieldBattle &&
@@ -552,7 +552,7 @@ namespace CalradianPatrols.Behaviors
                         }
                         else
                         {
-                            var attackScore = Model.GetAttackScoreforBanditParty(party, patrolPartyComponent, mobileParty) + MBRandom.RandomFloatRanged(-0.3f, 0.3f);
+                            var attackScore = Model.GetAttackScoreForParty(party, patrolPartyComponent, mobileParty) + MBRandom.RandomFloatRanged(-0.3f, 0.3f);
                             if (attackScore > bestAttackScore)
                             {
                                 selectedTarget = mobileParty;

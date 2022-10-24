@@ -27,7 +27,7 @@ namespace CalradianPatrols.Models
         public override ExplainedNumber CalculateFinalSpeed(MobileParty mobileParty, ExplainedNumber finalSpeed)
         {
             var baseSpeed = _baseModel.CalculateFinalSpeed(mobileParty, finalSpeed);
-            if (mobileParty.PartyComponent is PatrolPartyComponent)
+            if (mobileParty.PartyComponent is PatrolPartyComponent && Settings.GetInstance().PatrolPartySpeedBonus >= 0f)
             {
                 baseSpeed.AddFactor(Settings.GetInstance().PatrolPartySpeedBonus);
             }
