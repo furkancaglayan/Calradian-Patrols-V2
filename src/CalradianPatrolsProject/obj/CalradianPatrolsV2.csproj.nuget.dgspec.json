@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Mount & Blade II Bannerlord\\Modules\\CalradianPatrolsV2\\src\\CalradianPatrolsProject\\CalradianPatrolsV2.csproj": {}
+    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Mount & Blade II Bannerlord\\Modules\\Calradian-Patrols-V2\\src\\CalradianPatrolsProject\\CalradianPatrolsV2.csproj": {}
   },
   "projects": {
-    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Mount & Blade II Bannerlord\\Modules\\CalradianPatrolsV2\\src\\CalradianPatrolsProject\\CalradianPatrolsV2.csproj": {
+    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Mount & Blade II Bannerlord\\Modules\\Calradian-Patrols-V2\\src\\CalradianPatrolsProject\\CalradianPatrolsV2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Mount & Blade II Bannerlord\\Modules\\CalradianPatrolsV2\\src\\CalradianPatrolsProject\\CalradianPatrolsV2.csproj",
+        "projectUniqueName": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Mount & Blade II Bannerlord\\Modules\\Calradian-Patrols-V2\\src\\CalradianPatrolsProject\\CalradianPatrolsV2.csproj",
         "projectName": "CalradianPatrolsV2",
-        "projectPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Mount & Blade II Bannerlord\\Modules\\CalradianPatrolsV2\\src\\CalradianPatrolsProject\\CalradianPatrolsV2.csproj",
+        "projectPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Mount & Blade II Bannerlord\\Modules\\Calradian-Patrols-V2\\src\\CalradianPatrolsProject\\CalradianPatrolsV2.csproj",
         "packagesPath": "C:\\Users\\furka\\.nuget\\packages\\",
-        "outputPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Mount & Blade II Bannerlord\\Modules\\CalradianPatrolsV2\\src\\CalradianPatrolsProject\\obj\\",
+        "outputPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Mount & Blade II Bannerlord\\Modules\\Calradian-Patrols-V2\\src\\CalradianPatrolsProject\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [

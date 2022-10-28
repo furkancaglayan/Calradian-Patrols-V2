@@ -39,7 +39,7 @@ namespace CalradianPatrolsV2.CalradianPatrols
         public bool IncreasedBanditDensity { get; set; } = true;
         [SettingProperty("{=str_calradianpatrols_settings_11_0}Disable AI Spawns", RequireRestart = false, HintText = "{=str_calradianpatrols_settings_11_1}An option disable party spawns for AI altogether")]
         [SettingPropertyGroup("{=str_calradianpatrols_settings_basic}Calradian Patrols - Basic", GroupOrder = 0)]
-        public bool DisableSpawnsForAI { get; set; } = true;
+        public bool DisableSpawnsForAI { get; set; } = false;
 
         [SettingPropertyFloatingInteger("{=str_calradianpatrols_settings_5_0}Patrol Party Count per Town", 0f, 100f, "0", Order = 0, RequireRestart = true, HintText = "{=str_calradianpatrols_settings_5_1}Patrol Party Count - Higher values may drain performance.")]
         [SettingPropertyGroup("{=str_calradianpatrols_settings_basic}Calradian Patrols - Basic", GroupOrder = 0)]
