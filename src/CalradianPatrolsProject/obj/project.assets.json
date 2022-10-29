@@ -2,19 +2,30 @@
   "version": 3,
   "targets": {
     ".NETFramework,Version=v4.7.2": {
-      "Bannerlord.MCM/4.3.16": {
+      "Bannerlord.MCM/5.0.0": {
         "type": "package",
         "dependencies": {
-          "Lib.Harmony": "2.1.1"
+          "Bannerlord.ModuleManager.Source": "4.0.149",
+          "Lib.Harmony": "2.2.2"
         },
         "compile": {
-          "lib/net472/MCMv4.dll": {}
+          "lib/net472/MCMv5.dll": {}
         },
         "runtime": {
           "lib/net472/_._": {}
         }
       },
-      "Lib.Harmony/2.1.1": {
+      "Bannerlord.ModuleManager.Source/4.0.149": {
+        "type": "package",
+        "contentFiles": {
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
+      "Lib.Harmony/2.2.2": {
         "type": "package",
         "compile": {
           "lib/net472/0Harmony.dll": {}
@@ -25,19 +36,30 @@
       }
     },
     ".NETFramework,Version=v4.7.2/win": {
-      "Bannerlord.MCM/4.3.16": {
+      "Bannerlord.MCM/5.0.0": {
         "type": "package",
         "dependencies": {
-          "Lib.Harmony": "2.1.1"
+          "Bannerlord.ModuleManager.Source": "4.0.149",
+          "Lib.Harmony": "2.2.2"
         },
         "compile": {
-          "lib/net472/MCMv4.dll": {}
+          "lib/net472/MCMv5.dll": {}
         },
         "runtime": {
           "lib/net472/_._": {}
         }
       },
-      "Lib.Harmony/2.1.1": {
+      "Bannerlord.ModuleManager.Source/4.0.149": {
+        "type": "package",
+        "contentFiles": {
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
+      "Lib.Harmony/2.2.2": {
         "type": "package",
         "compile": {
           "lib/net472/0Harmony.dll": {}
@@ -48,19 +70,30 @@
       }
     },
     ".NETFramework,Version=v4.7.2/win-x64": {
-      "Bannerlord.MCM/4.3.16": {
+      "Bannerlord.MCM/5.0.0": {
         "type": "package",
         "dependencies": {
-          "Lib.Harmony": "2.1.1"
+          "Bannerlord.ModuleManager.Source": "4.0.149",
+          "Lib.Harmony": "2.2.2"
         },
         "compile": {
-          "lib/net472/MCMv4.dll": {}
+          "lib/net472/MCMv5.dll": {}
         },
         "runtime": {
           "lib/net472/_._": {}
         }
       },
-      "Lib.Harmony/2.1.1": {
+      "Bannerlord.ModuleManager.Source/4.0.149": {
+        "type": "package",
+        "contentFiles": {
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
+      "Lib.Harmony/2.2.2": {
         "type": "package",
         "compile": {
           "lib/net472/0Harmony.dll": {}
@@ -71,19 +104,30 @@
       }
     },
     ".NETFramework,Version=v4.7.2/win-x86": {
-      "Bannerlord.MCM/4.3.16": {
+      "Bannerlord.MCM/5.0.0": {
         "type": "package",
         "dependencies": {
-          "Lib.Harmony": "2.1.1"
+          "Bannerlord.ModuleManager.Source": "4.0.149",
+          "Lib.Harmony": "2.2.2"
         },
         "compile": {
-          "lib/net472/MCMv4.dll": {}
+          "lib/net472/MCMv5.dll": {}
         },
         "runtime": {
           "lib/net472/_._": {}
         }
       },
-      "Lib.Harmony/2.1.1": {
+      "Bannerlord.ModuleManager.Source/4.0.149": {
+        "type": "package",
+        "contentFiles": {
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
+      "Lib.Harmony/2.2.2": {
         "type": "package",
         "compile": {
           "lib/net472/0Harmony.dll": {}
@@ -95,30 +139,154 @@
     }
   },
   "libraries": {
-    "Bannerlord.MCM/4.3.16": {
-      "sha512": "C3tkURqfroZ1dzA4KGvHGC3FRWmPerGWjrELblX3L5z0zGbu9AhTyTqb4kqBtCchUBwNYaR/iDFOvxdEkCxbew==",
+    "Bannerlord.MCM/5.0.0": {
+      "sha512": "yoYadqL/Z+0L8j/mxy1FieRy/jbDf8qXh+hvgFWh9HzDyTw/IyaUJkforDlaYvlX1N0NjQGE0Rdg4mugIFtRmQ==",
       "type": "package",
-      "path": "bannerlord.mcm/4.3.16",
+      "path": "bannerlord.mcm/5.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "MCM-128-w-2.png",
-        "bannerlord.mcm.4.3.16.nupkg.sha512",
+        "bannerlord.mcm.5.0.0.nupkg.sha512",
         "bannerlord.mcm.nuspec",
-        "lib/net472/MCMv4.dll",
-        "lib/net472/MCMv4.pdb"
+        "lib/net472/MCMv5.dll",
+        "lib/net472/MCMv5.pdb"
       ]
     },
-    "Lib.Harmony/2.1.1": {
-      "sha512": "CZiVcq01bVIjL2baWW5SVGZWyd6ew8adFp4BB2bzZfIGcWkTEto0G9sKu+9HDrEd75qBq3EHnZxx/gizi4NnqA==",
+    "Bannerlord.ModuleManager.Source/4.0.149": {
+      "sha512": "c1rtIhKfLTBiydeD4r8ixN2dEs5HCzjUC2qt/wFSBpCyu5IYHEjLhk+Fg7pAMyBvNYWG38/h7m19XR2C1HPPgA==",
       "type": "package",
-      "path": "lib.harmony/2.1.1",
+      "path": "bannerlord.modulemanager.source/4.0.149",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Butter.png",
+        "bannerlord.modulemanager.source.4.0.149.nupkg.sha512",
+        "bannerlord.modulemanager.source.nuspec",
+        "content/cs/net5/Bannerlord.ModuleManager/AlphanumComparatorFast.cs.pp",
+        "content/cs/net5/Bannerlord.ModuleManager/ApplicationVersion.cs.pp",
+        "content/cs/net5/Bannerlord.ModuleManager/ApplicationVersionComparer.cs.pp",
+        "content/cs/net5/Bannerlord.ModuleManager/ApplicationVersionRange.cs.pp",
+        "content/cs/net5/Bannerlord.ModuleManager/ApplicationVersionType.cs.pp",
+        "content/cs/net5/Bannerlord.ModuleManager/DependentModule.cs.pp",
+        "content/cs/net5/Bannerlord.ModuleManager/DependentModuleMetadata.cs.pp",
+        "content/cs/net5/Bannerlord.ModuleManager/LoadType.cs.pp",
+        "content/cs/net5/Bannerlord.ModuleManager/ModuleInfoExtended.cs.pp",
+        "content/cs/net5/Bannerlord.ModuleManager/ModuleInfoExtendedExtensions.cs.pp",
+        "content/cs/net5/Bannerlord.ModuleManager/ModuleSorter.cs.pp",
+        "content/cs/net5/Bannerlord.ModuleManager/ModuleUtilities.cs.pp",
+        "content/cs/net5/Bannerlord.ModuleManager/SubModuleInfoExtended.cs.pp",
+        "content/cs/net5/Bannerlord.ModuleManager/SubModuleTags.cs.pp",
+        "content/cs/net6/Bannerlord.ModuleManager/AlphanumComparatorFast.cs.pp",
+        "content/cs/net6/Bannerlord.ModuleManager/ApplicationVersion.cs.pp",
+        "content/cs/net6/Bannerlord.ModuleManager/ApplicationVersionComparer.cs.pp",
+        "content/cs/net6/Bannerlord.ModuleManager/ApplicationVersionRange.cs.pp",
+        "content/cs/net6/Bannerlord.ModuleManager/ApplicationVersionType.cs.pp",
+        "content/cs/net6/Bannerlord.ModuleManager/DependentModule.cs.pp",
+        "content/cs/net6/Bannerlord.ModuleManager/DependentModuleMetadata.cs.pp",
+        "content/cs/net6/Bannerlord.ModuleManager/LoadType.cs.pp",
+        "content/cs/net6/Bannerlord.ModuleManager/ModuleInfoExtended.cs.pp",
+        "content/cs/net6/Bannerlord.ModuleManager/ModuleInfoExtendedExtensions.cs.pp",
+        "content/cs/net6/Bannerlord.ModuleManager/ModuleSorter.cs.pp",
+        "content/cs/net6/Bannerlord.ModuleManager/ModuleUtilities.cs.pp",
+        "content/cs/net6/Bannerlord.ModuleManager/SubModuleInfoExtended.cs.pp",
+        "content/cs/net6/Bannerlord.ModuleManager/SubModuleTags.cs.pp",
+        "content/cs/netstandard2.0/Bannerlord.ModuleManager/AlphanumComparatorFast.cs.pp",
+        "content/cs/netstandard2.0/Bannerlord.ModuleManager/ApplicationVersion.cs.pp",
+        "content/cs/netstandard2.0/Bannerlord.ModuleManager/ApplicationVersionComparer.cs.pp",
+        "content/cs/netstandard2.0/Bannerlord.ModuleManager/ApplicationVersionRange.cs.pp",
+        "content/cs/netstandard2.0/Bannerlord.ModuleManager/ApplicationVersionType.cs.pp",
+        "content/cs/netstandard2.0/Bannerlord.ModuleManager/DependentModule.cs.pp",
+        "content/cs/netstandard2.0/Bannerlord.ModuleManager/DependentModuleMetadata.cs.pp",
+        "content/cs/netstandard2.0/Bannerlord.ModuleManager/LoadType.cs.pp",
+        "content/cs/netstandard2.0/Bannerlord.ModuleManager/ModuleInfoExtended.cs.pp",
+        "content/cs/netstandard2.0/Bannerlord.ModuleManager/ModuleInfoExtendedExtensions.cs.pp",
+        "content/cs/netstandard2.0/Bannerlord.ModuleManager/ModuleSorter.cs.pp",
+        "content/cs/netstandard2.0/Bannerlord.ModuleManager/ModuleUtilities.cs.pp",
+        "content/cs/netstandard2.0/Bannerlord.ModuleManager/SubModuleInfoExtended.cs.pp",
+        "content/cs/netstandard2.0/Bannerlord.ModuleManager/SubModuleTags.cs.pp",
+        "content/cs/netstandard2.1/Bannerlord.ModuleManager/AlphanumComparatorFast.cs.pp",
+        "content/cs/netstandard2.1/Bannerlord.ModuleManager/ApplicationVersion.cs.pp",
+        "content/cs/netstandard2.1/Bannerlord.ModuleManager/ApplicationVersionComparer.cs.pp",
+        "content/cs/netstandard2.1/Bannerlord.ModuleManager/ApplicationVersionRange.cs.pp",
+        "content/cs/netstandard2.1/Bannerlord.ModuleManager/ApplicationVersionType.cs.pp",
+        "content/cs/netstandard2.1/Bannerlord.ModuleManager/DependentModule.cs.pp",
+        "content/cs/netstandard2.1/Bannerlord.ModuleManager/DependentModuleMetadata.cs.pp",
+        "content/cs/netstandard2.1/Bannerlord.ModuleManager/LoadType.cs.pp",
+        "content/cs/netstandard2.1/Bannerlord.ModuleManager/ModuleInfoExtended.cs.pp",
+        "content/cs/netstandard2.1/Bannerlord.ModuleManager/ModuleInfoExtendedExtensions.cs.pp",
+        "content/cs/netstandard2.1/Bannerlord.ModuleManager/ModuleSorter.cs.pp",
+        "content/cs/netstandard2.1/Bannerlord.ModuleManager/ModuleUtilities.cs.pp",
+        "content/cs/netstandard2.1/Bannerlord.ModuleManager/SubModuleInfoExtended.cs.pp",
+        "content/cs/netstandard2.1/Bannerlord.ModuleManager/SubModuleTags.cs.pp",
+        "contentFiles/cs/net5/Bannerlord.ModuleManager/AlphanumComparatorFast.cs.pp",
+        "contentFiles/cs/net5/Bannerlord.ModuleManager/ApplicationVersion.cs.pp",
+        "contentFiles/cs/net5/Bannerlord.ModuleManager/ApplicationVersionComparer.cs.pp",
+        "contentFiles/cs/net5/Bannerlord.ModuleManager/ApplicationVersionRange.cs.pp",
+        "contentFiles/cs/net5/Bannerlord.ModuleManager/ApplicationVersionType.cs.pp",
+        "contentFiles/cs/net5/Bannerlord.ModuleManager/DependentModule.cs.pp",
+        "contentFiles/cs/net5/Bannerlord.ModuleManager/DependentModuleMetadata.cs.pp",
+        "contentFiles/cs/net5/Bannerlord.ModuleManager/LoadType.cs.pp",
+        "contentFiles/cs/net5/Bannerlord.ModuleManager/ModuleInfoExtended.cs.pp",
+        "contentFiles/cs/net5/Bannerlord.ModuleManager/ModuleInfoExtendedExtensions.cs.pp",
+        "contentFiles/cs/net5/Bannerlord.ModuleManager/ModuleSorter.cs.pp",
+        "contentFiles/cs/net5/Bannerlord.ModuleManager/ModuleUtilities.cs.pp",
+        "contentFiles/cs/net5/Bannerlord.ModuleManager/SubModuleInfoExtended.cs.pp",
+        "contentFiles/cs/net5/Bannerlord.ModuleManager/SubModuleTags.cs.pp",
+        "contentFiles/cs/net6/Bannerlord.ModuleManager/AlphanumComparatorFast.cs.pp",
+        "contentFiles/cs/net6/Bannerlord.ModuleManager/ApplicationVersion.cs.pp",
+        "contentFiles/cs/net6/Bannerlord.ModuleManager/ApplicationVersionComparer.cs.pp",
+        "contentFiles/cs/net6/Bannerlord.ModuleManager/ApplicationVersionRange.cs.pp",
+        "contentFiles/cs/net6/Bannerlord.ModuleManager/ApplicationVersionType.cs.pp",
+        "contentFiles/cs/net6/Bannerlord.ModuleManager/DependentModule.cs.pp",
+        "contentFiles/cs/net6/Bannerlord.ModuleManager/DependentModuleMetadata.cs.pp",
+        "contentFiles/cs/net6/Bannerlord.ModuleManager/LoadType.cs.pp",
+        "contentFiles/cs/net6/Bannerlord.ModuleManager/ModuleInfoExtended.cs.pp",
+        "contentFiles/cs/net6/Bannerlord.ModuleManager/ModuleInfoExtendedExtensions.cs.pp",
+        "contentFiles/cs/net6/Bannerlord.ModuleManager/ModuleSorter.cs.pp",
+        "contentFiles/cs/net6/Bannerlord.ModuleManager/ModuleUtilities.cs.pp",
+        "contentFiles/cs/net6/Bannerlord.ModuleManager/SubModuleInfoExtended.cs.pp",
+        "contentFiles/cs/net6/Bannerlord.ModuleManager/SubModuleTags.cs.pp",
+        "contentFiles/cs/netstandard2.0/Bannerlord.ModuleManager/AlphanumComparatorFast.cs.pp",
+        "contentFiles/cs/netstandard2.0/Bannerlord.ModuleManager/ApplicationVersion.cs.pp",
+        "contentFiles/cs/netstandard2.0/Bannerlord.ModuleManager/ApplicationVersionComparer.cs.pp",
+        "contentFiles/cs/netstandard2.0/Bannerlord.ModuleManager/ApplicationVersionRange.cs.pp",
+        "contentFiles/cs/netstandard2.0/Bannerlord.ModuleManager/ApplicationVersionType.cs.pp",
+        "contentFiles/cs/netstandard2.0/Bannerlord.ModuleManager/DependentModule.cs.pp",
+        "contentFiles/cs/netstandard2.0/Bannerlord.ModuleManager/DependentModuleMetadata.cs.pp",
+        "contentFiles/cs/netstandard2.0/Bannerlord.ModuleManager/LoadType.cs.pp",
+        "contentFiles/cs/netstandard2.0/Bannerlord.ModuleManager/ModuleInfoExtended.cs.pp",
+        "contentFiles/cs/netstandard2.0/Bannerlord.ModuleManager/ModuleInfoExtendedExtensions.cs.pp",
+        "contentFiles/cs/netstandard2.0/Bannerlord.ModuleManager/ModuleSorter.cs.pp",
+        "contentFiles/cs/netstandard2.0/Bannerlord.ModuleManager/ModuleUtilities.cs.pp",
+        "contentFiles/cs/netstandard2.0/Bannerlord.ModuleManager/SubModuleInfoExtended.cs.pp",
+        "contentFiles/cs/netstandard2.0/Bannerlord.ModuleManager/SubModuleTags.cs.pp",
+        "contentFiles/cs/netstandard2.1/Bannerlord.ModuleManager/AlphanumComparatorFast.cs.pp",
+        "contentFiles/cs/netstandard2.1/Bannerlord.ModuleManager/ApplicationVersion.cs.pp",
+        "contentFiles/cs/netstandard2.1/Bannerlord.ModuleManager/ApplicationVersionComparer.cs.pp",
+        "contentFiles/cs/netstandard2.1/Bannerlord.ModuleManager/ApplicationVersionRange.cs.pp",
+        "contentFiles/cs/netstandard2.1/Bannerlord.ModuleManager/ApplicationVersionType.cs.pp",
+        "contentFiles/cs/netstandard2.1/Bannerlord.ModuleManager/DependentModule.cs.pp",
+        "contentFiles/cs/netstandard2.1/Bannerlord.ModuleManager/DependentModuleMetadata.cs.pp",
+        "contentFiles/cs/netstandard2.1/Bannerlord.ModuleManager/LoadType.cs.pp",
+        "contentFiles/cs/netstandard2.1/Bannerlord.ModuleManager/ModuleInfoExtended.cs.pp",
+        "contentFiles/cs/netstandard2.1/Bannerlord.ModuleManager/ModuleInfoExtendedExtensions.cs.pp",
+        "contentFiles/cs/netstandard2.1/Bannerlord.ModuleManager/ModuleSorter.cs.pp",
+        "contentFiles/cs/netstandard2.1/Bannerlord.ModuleManager/ModuleUtilities.cs.pp",
+        "contentFiles/cs/netstandard2.1/Bannerlord.ModuleManager/SubModuleInfoExtended.cs.pp",
+        "contentFiles/cs/netstandard2.1/Bannerlord.ModuleManager/SubModuleTags.cs.pp"
+      ]
+    },
+    "Lib.Harmony/2.2.2": {
+      "sha512": "70KvWz+DiUELxafsYL/LHxA/jH3PDWeApLo/VwtnrpTvRWQ/eUdPfS/l5funmhZWOy41QXw6UjVv+6C57Nx77A==",
+      "type": "package",
+      "path": "lib.harmony/2.2.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "HarmonyLogo.png",
         "LICENSE",
-        "lib.harmony.2.1.1.nupkg.sha512",
+        "lib.harmony.2.2.2.nupkg.sha512",
         "lib.harmony.nuspec",
         "lib/net35/0Harmony.dll",
         "lib/net35/0Harmony.xml",
@@ -130,6 +298,8 @@
         "lib/net48/0Harmony.xml",
         "lib/net5.0/0Harmony.dll",
         "lib/net5.0/0Harmony.xml",
+        "lib/net6.0/0Harmony.dll",
+        "lib/net6.0/0Harmony.xml",
         "lib/netcoreapp3.0/0Harmony.dll",
         "lib/netcoreapp3.0/0Harmony.xml",
         "lib/netcoreapp3.1/0Harmony.dll",
@@ -139,7 +309,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.7.2": [
-      "Bannerlord.MCM >= 4.3.16"
+      "Bannerlord.MCM >= 5.0.0"
     ]
   },
   "packageFolders": {
@@ -178,7 +348,7 @@
           "Bannerlord.MCM": {
             "include": "Compile",
             "target": "Package",
-            "version": "[4.3.16, )"
+            "version": "[5.0.0, )"
           }
         }
       }
