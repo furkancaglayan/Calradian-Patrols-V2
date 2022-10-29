@@ -46,9 +46,9 @@ namespace CalradianPatrolsV2.CalradianPatrols
         public int PatrolPartyCountPerTown { get; set; } = 5;
         [SettingPropertyFloatingInteger("{=str_calradianpatrols_settings_6_0}Tier Requirement to Hire Parties", 0f, 6f, "0", Order = 0, RequireRestart = false, HintText = "{=str_calradianpatrols_settings_6_1}Minimum Clan Tier Hire Patrol Parties")]
         public int PatrolPartiesTierRequirement { get; set; } = 2;
-        [SettingPropertyFloatingInteger("{=str_calradianpatrols_settings_7_0}Base Spawn Chance for AI", 0f, 1f, "0%", Order = 0, RequireRestart = false, HintText = "{=str_calradianpatrols_settings_7_1}Base chance to spawn a patrol party for AI. Higher values my drain performance")]
+        [SettingPropertyFloatingInteger("{=str_calradianpatrols_settings_7_0}Spawn Chance for AI", 0f, 1f, "0%", Order = 0, RequireRestart = false, HintText = "{=str_calradianpatrols_settings_7_1}Chance to spawn a patrol party for AI. Higher values my drain performance")]
         [SettingPropertyGroup("{=str_calradianpatrols_settings_basic}Calradian Patrols - Basic", GroupOrder = 0)]
-        public float BaseAISpawnPartyChance { get; set; } = 0.08f;
+        public float AISpawnPartyChance { get; set; } = 0.04f;
         [SettingPropertyFloatingInteger("{=str_calradianpatrols_settings_8_0}Patrol Party Base Gold Cost", 0f, 100000f, "0", Order = 0, RequireRestart = false, HintText = "{=str_calradianpatrols_settings_8_1}Cost still increases with each party.")]
         [SettingPropertyGroup("{=str_calradianpatrols_settings_basic}Calradian Patrols - Basic", GroupOrder = 0)]
         public int BaseGoldCost { get; set; } = 8000;

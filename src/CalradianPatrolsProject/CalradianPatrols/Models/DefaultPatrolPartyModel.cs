@@ -88,19 +88,7 @@ namespace CalradianPatrols.Models
                 return 0.0f;
             }
 
-            var baseChance = Settings.GetInstance().BaseAISpawnPartyChance;
-            if (settlement.IsFortification && settlement.Town.Governor != null)
-            {
-                var skill = settlement.Town.Governor.GetSkillValue(DefaultSkills.Steward);
-                var governorBonusSkill = ((int)(skill / 100f)) / 10f;
-                if (governorBonusSkill >= 0f)
-                {
-                    baseChance += governorBonusSkill;
-                }
-            }
-
-
-            return Math.Max(0f, (baseChance - (activePartyCount * 0.01f)));
+            return Settings.GetInstance().AISpawnPartyChance;
         }
 
         public override float GetPatrolPartyAggressiveness(MobileParty party)
