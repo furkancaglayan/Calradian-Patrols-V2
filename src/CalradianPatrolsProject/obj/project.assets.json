@@ -8,19 +8,27 @@
           "Lib.Harmony": "2.1.1"
         },
         "compile": {
-          "lib/net472/MCMv4.dll": {}
+          "lib/net472/MCMv4.dll": {
+            "related": ".pdb"
+          }
         },
         "runtime": {
-          "lib/net472/_._": {}
+          "lib/net472/_._": {
+            "related": ".pdb"
+          }
         }
       },
       "Lib.Harmony/2.1.1": {
         "type": "package",
         "compile": {
-          "lib/net472/0Harmony.dll": {}
+          "lib/net472/0Harmony.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net472/_._": {}
+          "lib/net472/_._": {
+            "related": ".xml"
+          }
         }
       }
     },
@@ -31,19 +39,27 @@
           "Lib.Harmony": "2.1.1"
         },
         "compile": {
-          "lib/net472/MCMv4.dll": {}
+          "lib/net472/MCMv4.dll": {
+            "related": ".pdb"
+          }
         },
         "runtime": {
-          "lib/net472/_._": {}
+          "lib/net472/_._": {
+            "related": ".pdb"
+          }
         }
       },
       "Lib.Harmony/2.1.1": {
         "type": "package",
         "compile": {
-          "lib/net472/0Harmony.dll": {}
+          "lib/net472/0Harmony.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net472/_._": {}
+          "lib/net472/_._": {
+            "related": ".xml"
+          }
         }
       }
     },
@@ -54,19 +70,27 @@
           "Lib.Harmony": "2.1.1"
         },
         "compile": {
-          "lib/net472/MCMv4.dll": {}
+          "lib/net472/MCMv4.dll": {
+            "related": ".pdb"
+          }
         },
         "runtime": {
-          "lib/net472/_._": {}
+          "lib/net472/_._": {
+            "related": ".pdb"
+          }
         }
       },
       "Lib.Harmony/2.1.1": {
         "type": "package",
         "compile": {
-          "lib/net472/0Harmony.dll": {}
+          "lib/net472/0Harmony.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net472/_._": {}
+          "lib/net472/_._": {
+            "related": ".xml"
+          }
         }
       }
     },
@@ -77,19 +101,27 @@
           "Lib.Harmony": "2.1.1"
         },
         "compile": {
-          "lib/net472/MCMv4.dll": {}
+          "lib/net472/MCMv4.dll": {
+            "related": ".pdb"
+          }
         },
         "runtime": {
-          "lib/net472/_._": {}
+          "lib/net472/_._": {
+            "related": ".pdb"
+          }
         }
       },
       "Lib.Harmony/2.1.1": {
         "type": "package",
         "compile": {
-          "lib/net472/0Harmony.dll": {}
+          "lib/net472/0Harmony.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net472/_._": {}
+          "lib/net472/_._": {
+            "related": ".xml"
+          }
         }
       }
     }
@@ -143,7 +175,8 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\furka\\.nuget\\packages\\": {}
+    "C:\\Users\\furkan.caglayan\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
@@ -151,12 +184,16 @@
       "projectUniqueName": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Mount & Blade II Bannerlord\\Modules\\Calradian-Patrols-V2\\src\\CalradianPatrolsProject\\CalradianPatrolsV2.csproj",
       "projectName": "CalradianPatrolsV2",
       "projectPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Mount & Blade II Bannerlord\\Modules\\Calradian-Patrols-V2\\src\\CalradianPatrolsProject\\CalradianPatrolsV2.csproj",
-      "packagesPath": "C:\\Users\\furka\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\furkan.caglayan\\.nuget\\packages\\",
       "outputPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Mount & Blade II Bannerlord\\Modules\\Calradian-Patrols-V2\\src\\CalradianPatrolsProject\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\furka\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\furkan.caglayan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

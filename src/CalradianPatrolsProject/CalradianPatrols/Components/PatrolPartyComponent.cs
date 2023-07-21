@@ -145,17 +145,17 @@ namespace CalradianPatrols.Components
 
         private void PatrolAroundSettlement(Settlement settlement)
         {
-            MobileParty.SetMovePatrolAroundSettlement(settlement);
+            MobileParty.Ai.SetMovePatrolAroundSettlement(settlement);
         }
 
         private void FollowParty(MobileParty party)
         {
-            MobileParty.SetMoveEscortParty(party);
+            MobileParty.Ai.SetMoveEscortParty(party);
         }
 
         private void GoToSettlement(Settlement settlement)
         {
-            MobileParty.SetMoveGoToSettlement(settlement);
+            MobileParty.Ai.SetMoveGoToSettlement(settlement);
         }
 
         private void Disband()
@@ -165,7 +165,7 @@ namespace CalradianPatrols.Components
 
         private void EngageBanditParty(MobileParty party)
         {
-            MobileParty.SetMoveEngageParty(party);
+            MobileParty.Ai.SetMoveEngageParty(party);
         }
 
         private void RestInSettlement(Settlement settlement)

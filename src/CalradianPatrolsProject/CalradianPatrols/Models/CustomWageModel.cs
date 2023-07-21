@@ -17,9 +17,10 @@ namespace CalradianPatrols.Models
 
         public override int MaxWage => _baseModel.MaxWage;
 
-        public override int GetCharacterWage(int tier)
+
+        public override int GetCharacterWage(CharacterObject character)
         {
-            return _baseModel.GetCharacterWage(tier);
+            return _baseModel.GetCharacterWage(character);
         }
 
         public override ExplainedNumber GetTotalWage(MobileParty mobileParty, bool includeDescriptions = false)

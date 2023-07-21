@@ -10,12 +10,16 @@
         "projectUniqueName": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Mount & Blade II Bannerlord\\Modules\\Calradian-Patrols-V2\\src\\CalradianPatrolsProject\\CalradianPatrolsV2.csproj",
         "projectName": "CalradianPatrolsV2",
         "projectPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Mount & Blade II Bannerlord\\Modules\\Calradian-Patrols-V2\\src\\CalradianPatrolsProject\\CalradianPatrolsV2.csproj",
-        "packagesPath": "C:\\Users\\furka\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\furkan.caglayan\\.nuget\\packages\\",
         "outputPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Mount & Blade II Bannerlord\\Modules\\Calradian-Patrols-V2\\src\\CalradianPatrolsProject\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\furka\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\furkan.caglayan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

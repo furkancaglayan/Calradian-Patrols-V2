@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "we19/KKvKDNVa9waFCm890yGrlNgAA7tzDVVRb7guM1PWXH7jxrvjemZPaL28D28pt1FeOc84sxHEZypWzjRvw==",
+  "dgSpecHash": "HU1Bf/h5+zEEuIv3Owoh6Xt6ny6g5FM01IS75INxtkYdheUIpLNLIKDJkndOEfdJ9alfK9qaPCOUNnPfkRivTA==",
   "success": true,
   "projectFilePath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Mount & Blade II Bannerlord\\Modules\\Calradian-Patrols-V2\\src\\CalradianPatrolsProject\\CalradianPatrolsV2.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\furka\\.nuget\\packages\\bannerlord.mcm\\4.3.16\\bannerlord.mcm.4.3.16.nupkg.sha512",
-    "C:\\Users\\furka\\.nuget\\packages\\lib.harmony\\2.1.1\\lib.harmony.2.1.1.nupkg.sha512"
+    "C:\\Users\\furkan.caglayan\\.nuget\\packages\\bannerlord.mcm\\4.3.16\\bannerlord.mcm.4.3.16.nupkg.sha512",
+    "C:\\Users\\furkan.caglayan\\.nuget\\packages\\lib.harmony\\2.1.1\\lib.harmony.2.1.1.nupkg.sha512"
   ],
   "logs": []
 }

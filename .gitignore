@@ -396,3 +396,8 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+*.targets
+*.json
+src/.vs/CalradianPatrolsV2/v17/.suo
+*.cache
+*.props

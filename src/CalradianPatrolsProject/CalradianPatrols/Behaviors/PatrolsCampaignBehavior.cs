@@ -166,7 +166,7 @@ namespace CalradianPatrols.Behaviors
             }
         }
 
-        private void OnConversationEnded(CharacterObject character)
+        private void OnConversationEnded(IEnumerable<CharacterObject> characters)
         {
             _currentConversationEncounterDataList.Clear();
         }
@@ -520,7 +520,8 @@ namespace CalradianPatrols.Behaviors
 
         private void MakeNewDecision(MobileParty party, PatrolPartyComponent patrolPartyComponent)
         {
-            var partiesAround = new MobilePartiesAroundPositionList(32).GetPartiesAroundPosition(party.Position2D, party.SeeingRange);
+            var searchData = MobileParty.StartFindingLocatablesAroundPosition(party.Position2D, party.SeeingRange);
+            var mobileParty = MobileParty.FindNextLocatable(ref searchData);
 
             MobileParty selectedTarget = null;
             var bestAttackScore = 0f;
@@ -532,7 +533,7 @@ namespace CalradianPatrols.Behaviors
 
             if (!skipAttack || canChangeTarget)
             {
-                foreach (var mobileParty in partiesAround)
+                while (mobileParty != null)
                 {
                     if (mobileParty.IsBandit && mobileParty.IsActive && mobileParty.CurrentSettlement == null)
                     {
@@ -560,6 +561,8 @@ namespace CalradianPatrols.Behaviors
                             }
                         }
                     }
+
+                    mobileParty = MobileParty.FindNextLocatable(ref searchData);
                 }
             }
 
@@ -621,7 +624,7 @@ namespace CalradianPatrols.Behaviors
                 mainParty.MobileParty.PartyComponent is PatrolPartyComponent component)
             {
                 var nearbySettlement =
-                    Helpers.SettlementHelper.FindNearestSettlementToPoint(mainParty.MobileParty.Position2D, x => Campaign.Current.Models.MapDistanceModel.GetDistance(mainParty.MobileParty, x) < MaxDistanceForNearEncounterSettlement);
+                    Helpers.SettlementHelper.FindNearestSettlement(x => Campaign.Current.Models.MapDistanceModel.GetDistance(mainParty.MobileParty, x) < MaxDistanceForNearEncounterSettlement, mainParty.MobileParty);
                 AddEncounterDataAtMapEventStartInternal(encounteredParty, component, nearbySettlement);
             }
         }
@@ -934,7 +937,7 @@ namespace CalradianPatrols.Behaviors
 
         private bool hire_patrol_auto_recruit_on_condition(MenuCallbackArgs args)
         {
-            args.optionLeaveType = GameMenuOption.LeaveType.RansomAndBribe;
+            args.optionLeaveType = GameMenuOption.LeaveType.Recruit;
             var autoRecruitIsOn = _autoRecruits[Settlement.CurrentSettlement];
 
             if (Settlement.CurrentSettlement.IsUnderSiege)
@@ -987,7 +990,7 @@ namespace CalradianPatrols.Behaviors
                 if (!FactionManager.IsAtWarAgainstFaction(Hero.MainHero.MapFaction, enemyParty.MapFaction) && Hero.MainHero.MapFaction.Leader == Hero.MainHero)
                 {
                     ChangeRelationAction.ApplyPlayerRelation(enemyParty.MapFaction.Leader, -10);
-                    DeclareWarAction.Apply(Hero.MainHero.MapFaction, enemyParty.MapFaction);
+                    DeclareWarAction.ApplyByPlayerHostility(Hero.MainHero.MapFaction, enemyParty.MapFaction);
                 }
             }
         }
