@@ -1,9 +1,0 @@
-D:\Develop\Patrol Parties\Module\CalradianPatrols\bin\Win64_Shipping_Client\CalradianPatrolsProject.dll
-D:\Develop\Patrol Parties\Module\CalradianPatrols\bin\Win64_Shipping_Client\CalradianPatrolsProject.pdb
-D:\Develop\Patrol Parties\CalradianPatrolsProject\CalradianPatrolsProject\obj\Debug\CalradianPatrols.csproj.AssemblyReference.cache
-D:\Develop\Patrol Parties\CalradianPatrolsProject\CalradianPatrolsProject\obj\Debug\CalradianPatrols.csproj.CoreCompileInputs.cache
-D:\Develop\Patrol Parties\CalradianPatrolsProject\CalradianPatrolsProject\obj\Debug\CalradianPatrols.csproj.CopyComplete
-D:\Develop\Patrol Parties\CalradianPatrolsProject\CalradianPatrolsProject\obj\Debug\CalradianPatrolsProject.dll
-D:\Develop\Patrol Parties\CalradianPatrolsProject\CalradianPatrolsProject\obj\Debug\CalradianPatrolsProject.pdb
-D:\Develop\Patrol Parties\Module\CalradianPatrolsV2\bin\Win64_Shipping_Client\CalradianPatrolsProject.dll
-D:\Develop\Patrol Parties\Module\CalradianPatrolsV2\bin\Win64_Shipping_Client\CalradianPatrolsProject.pdb
