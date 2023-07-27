@@ -1,4 +1,4 @@
-Version: 3.0.1
-Game Version: e1.8.0
-- Added a console command to remove all parties from game. "manhunters.remove_all". This should presumably make it easy to remove the mod.
-- Fixed parties spawning even with %0 chance.
+Version: v4.0.0
+Game Version: v1.1.5
+
+- Fixed a crash that happens when creating a custom game.
