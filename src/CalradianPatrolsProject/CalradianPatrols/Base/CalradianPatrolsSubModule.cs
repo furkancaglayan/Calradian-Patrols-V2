@@ -22,7 +22,10 @@ namespace CalradianPatrols.Base
         public override void OnGameInitializationFinished(Game game)
         {
             base.OnGameInitializationFinished(game);
-            ModManager.Initialize();
+            if (game.GameType is Campaign)
+            {
+                ModManager.Initialize();
+            }
         }
 
         public override void OnGameEnd(Game game)
