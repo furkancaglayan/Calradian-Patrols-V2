@@ -2,7 +2,6 @@
 using CalradianPatrols.Models;
 using CalradianPatrols.Notice;
 using CalradianPatrolsV2.CalradianPatrols;
-using MCM.Abstractions.Settings.Providers;
 using SandBox.View.Map;
 using System.Linq;
 using TaleWorlds.CampaignSystem;

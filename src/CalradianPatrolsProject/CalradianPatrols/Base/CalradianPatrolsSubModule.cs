@@ -1,7 +1,6 @@
 ﻿using CalradianPatrols.Behaviors;
 using CalradianPatrols.Models;
 using CalradianPatrolsV2.CalradianPatrols;
-using MCM.Abstractions.Settings.Providers;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.Core;
 using TaleWorlds.Engine;
