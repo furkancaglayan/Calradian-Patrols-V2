@@ -401,3 +401,6 @@ FodyWeavers.xsd
 src/.vs/CalradianPatrolsV2/v17/.suo
 *.cache
 *.props
+
+
+!bin\Win64_Shipping_Client\MCM*.*
