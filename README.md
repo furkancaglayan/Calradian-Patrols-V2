@@ -5,7 +5,6 @@
 
 ![](https://img.shields.io/github/stars/furkancaglayan/Calradian-Patrols-V2.svg) ![](https://img.shields.io/github/forks/furkancaglayan/Calradian-Patrols-V2.svg) ![](https://img.shields.io/github/tag/furkancaglayan/Calradian-Patrols-V2.svg) ![](https://img.shields.io/github/release/furkancaglayan/Calradian-Patrols-V2.svg) ![](https://img.shields.io/github/issues/furkancaglayan/Calradian-Patrols-V2.svg) 
 
-  <img src="https://staticdelivery.nexusmods.com/mods/3174/images/3536/3536-1640761699-156913679.png" width="800">
 
  <a href="https://www.nexusmods.com/mountandblade2bannerlord/mods/3536" alt="NexusMods Calradian-Patrols-V2">
     <img src="https://img.shields.io/badge/NexusMods-Calradian%20Patrols%20V2-green.svg" />
@@ -27,6 +26,7 @@
   <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2859407083"><img alt="Steam Views" src="https://img.shields.io/steam/views/2859407083?label=Views&color=blue"></a>
   <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2859407083"><img alt="Steam Subscriptions" src="https://img.shields.io/steam/subscriptions/2859407083?label=Subscriptions&color=blue"></a>
   <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2859407083"><img alt="Steam Favorites" src="https://img.shields.io/steam/favorites/2859407083?label=Favorites&color=blue"></a>
+  <img src="https://staticdelivery.nexusmods.com/mods/3174/images/3536/3536-1640761699-156913679.png" width="800">
   
   </br>
   <img src="https://staticdelivery.nexusmods.com/mods/3174/images/3536/3536-1653660875-364694916.png" width="800">
