@@ -2,11 +2,7 @@
 
 
 <p align="center">
-![](https://img.shields.io/github/stars/furkancaglayan/Calradian-Patrols-V2.svg) 
-![](https://img.shields.io/github/forks/furkancaglayan/Calradian-Patrols-V2.svg) 
-![](https://img.shields.io/github/tag/furkancaglayan/Calradian-Patrols-V2.svg) 
-![](https://img.shields.io/github/release/furkancaglayan/Calradian-Patrols-V2.svg) 
-![](https://img.shields.io/github/issues/furkancaglayan/Calradian-Patrols-V2.svg) 
+![](https://img.shields.io/github/stars/furkancaglayan/Calradian-Patrols-V2.svg)![](https://img.shields.io/github/forks/furkancaglayan/Calradian-Patrols-V2.svg)![](https://img.shields.io/github/tag/furkancaglayan/Calradian-Patrols-V2.svg) ![](https://img.shields.io/github/release/furkancaglayan/Calradian-Patrols-V2.svg) ![](https://img.shields.io/github/issues/furkancaglayan/Calradian-Patrols-V2.svg) 
 </p>
 
 
