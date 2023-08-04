@@ -2,7 +2,6 @@
 
 
 <p align="center">
-
 ![](https://img.shields.io/github/stars/furkancaglayan/Calradian-Patrols-V2.svg) 
 ![](https://img.shields.io/github/forks/furkancaglayan/Calradian-Patrols-V2.svg) 
 ![](https://img.shields.io/github/tag/furkancaglayan/Calradian-Patrols-V2.svg) 
@@ -13,7 +12,7 @@
 
 <p align="center">
   <a href="https://www.nexusmods.com/mountandblade2bannerlord/mods/3536" alt="NexusMods Calradian-Patrols-V2">
-    <img src="https://img.shields.io/badge/NexusMods-Calradian%20Patrols%20V2-green.svg" />
+    <img src="https://img.shields.io/badge/NexusMods-Calradian%20Patrols%20V2.svg" />
   </a>
   <a href="https://www.nexusmods.com/mountandblade2bannerlord/mods/3536" alt="NexusMods Calradian-Patrols-V2">
     <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fnexusmods-version-pzk4e0ejol6j.runkit.sh%3FgameId%3Dmountandblade2bannerlord%26modId%3D3536" />
