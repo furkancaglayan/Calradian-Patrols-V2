@@ -21,11 +21,6 @@
 
 <br>
 
-<p align="center">
-    <kbd>
-        <img src="https://staticdelivery.nexusmods.com/mods/3174/images/headers/3536_1642278614.jpg" width="800">
-    </kbd>
-</p>
 
 
 
@@ -37,4 +32,8 @@
   <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2859407083"><img alt="Steam Favorites" src="https://img.shields.io/steam/favorites/2859407083?label=Favorites&color=blue"></a>
 </p>
 
-<img src="https://staticdelivery.nexusmods.com/mods/3174/images/3536/3536-1653660875-364694916.png" width="800">
+<p align="center">
+    <kbd>
+        <img src="https://staticdelivery.nexusmods.com/mods/3174/images/headers/3536_1642278614.jpg" width="800">
+    </kbd>
+</p>
