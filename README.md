@@ -1,4 +1,5 @@
 <p align="center">
+<img src="https://staticdelivery.nexusmods.com/mods/3174/images/headers/3536_1642278614.jpg" width="800">
   <a href="https://www.nexusmods.com/mountandblade2bannerlord/mods/3536" alt="NexusMods Calradian-Patrols-V2">
     <img src="https://img.shields.io/badge/NexusMods-Calradian%20Patrols%20V2.svg" />
   </a>
