@@ -1,6 +1,6 @@
 <p align="center">
 
-    [![Github All Releases](https://img.shields.io/github/downloads/atom/atom/total.svg?style=flat)]()  
+[![Github All Releases](https://img.shields.io/github/downloads/atom/atom/total.svg?style=flat)]()  
 
   <a href="https://www.nexusmods.com/mountandblade2bannerlord/mods/3536" alt="NexusMods Calradian-Patrols-V2">
     <img src="https://img.shields.io/badge/NexusMods-Calradian%20Patrols%20V2.svg" />
