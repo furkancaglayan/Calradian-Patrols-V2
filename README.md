@@ -27,6 +27,8 @@
   <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2859407083"><img alt="Steam Favorites" src="https://img.shields.io/steam/favorites/2859407083?label=Favorites&color=blue"></a>
   <img src="https://staticdelivery.nexusmods.com/mods/3174/images/3536/3536-1640761699-156913679.png" width="800">
   
-  </br>
-  <img src="https://staticdelivery.nexusmods.com/mods/3174/images/3536/3536-1653660875-364694916.png" width="800">
+  
+  
 </p>
+
+<img src="https://staticdelivery.nexusmods.com/mods/3174/images/3536/3536-1653660875-364694916.png" width="800">
