@@ -338,7 +338,7 @@ namespace CalradianPatrols.Behaviors
                     gold += Campaign.Current.Models.RansomValueCalculationModel.PrisonerRansomValue(prisoner.Character);
                 }
 
-                SellPrisonersAction.ApplyForAllPrisoners(party, party.PrisonRoster, party.CurrentSettlement, false);
+                SellPrisonersAction.ApplyForAllPrisoners(party.Party, party.CurrentSettlement.Party);
                 component.Gold += gold;
             }
         }
@@ -535,7 +535,7 @@ namespace CalradianPatrols.Behaviors
             {
                 while (mobileParty != null)
                 {
-                    if (mobileParty.IsBandit && mobileParty.IsActive && mobileParty.CurrentSettlement == null)
+                    if (mobileParty.IsBandit && mobileParty.IsActive && mobileParty.CurrentSettlement == null && !mobileParty.IsCurrentlyUsedByAQuest)
                     {
                         if (mobileParty.MapEvent != null &&
                             mobileParty.MapEvent.EventType == MapEvent.BattleTypes.FieldBattle &&

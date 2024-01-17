@@ -6,10 +6,11 @@ using CalradianPatrols.Components;
 using static CalradianPatrols.Components.PatrolPartyComponent;
 using TaleWorlds.CampaignSystem.Settlements;
 using TaleWorlds.CampaignSystem.Party;
+using TaleWorlds.SaveSystem;
 
 namespace CalradianPatrols.SaveLoad
 {
-    public class CalradianPatrolsCustomSaveDefiner : CampaignBehaviorBase.SaveableCampaignBehaviorTypeDefiner
+    public class CalradianPatrolsCustomSaveDefiner : SaveableTypeDefiner
     {
         public CalradianPatrolsCustomSaveDefiner() : base(435142)
         {

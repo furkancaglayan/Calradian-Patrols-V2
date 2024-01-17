@@ -1,4 +1,4 @@
-Version: v4.0.1
-Game Version: v1.1.5
+Version: v4.0.2
+Game Version: v1.2.8
 
-- Fixed a crash that happens when creating a custom game.
+- Patrol parties now won't attack quest parties (for example Escort Caravan quest).

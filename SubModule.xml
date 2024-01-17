@@ -1,13 +1,13 @@
  <Module>
      <Name value="Calradian Patrols V2"/>
      <Id value="CalradianPatrolsV2"/>
-     <Version value="v4.0.1"/>
+     <Version value="v4.0.2"/>
      <SingleplayerModule value="true"/>
      <MultiplayerModule value="false"/>
      <DependedModules>
-         <DependedModule Id="Native" DependentVersion = "v1.1.5"/>
-         <DependedModule Id="SandBoxCore" DependentVersion = "v1.1.5"/>
-         <DependedModule Id="Sandbox" DependentVersion = "v1.1.5"/>
+         <DependedModule Id="Native" DependentVersion = "v1.2.8"/>
+         <DependedModule Id="SandBoxCore" DependentVersion = "v1.2.8"/>
+         <DependedModule Id="Sandbox" DependentVersion = "v1.2.8"/>
      </DependedModules>
      <SubModules>
          <SubModule>
