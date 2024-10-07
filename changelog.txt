@@ -1,4 +1,4 @@
-Version: v4.0.2
-Game Version: v1.2.8
+Version: v4.0.3
+Game Version: v1.2.11
 
-- Patrol parties now won't attack quest parties (for example Escort Caravan quest).
+- Fixed a crash that happens when changing a patrol party's name.

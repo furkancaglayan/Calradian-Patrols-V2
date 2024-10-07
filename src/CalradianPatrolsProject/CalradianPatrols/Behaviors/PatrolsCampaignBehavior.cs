@@ -1352,31 +1352,28 @@ namespace CalradianPatrols.Behaviors
 
         private static Tuple<bool, string> IsPartyNameApplicable(string name)
         {
-            var text = TextObject.Empty;
-            var result = true;
             bool isValidLength = name.Length >= 5 && name.Length <= 50;
             if (!isValidLength)
             {
-                result = false;
-                text = GameTexts.FindText("str_invalid_name", "0");
+                return new Tuple<bool, string>(false, GameTexts.FindText("str_invalid_name", "0").ToString());
             }
             else if (Common.TextContainsSpecialCharacters(name))
             {
-                result = false;
-                text = GameTexts.FindText("str_invalid_name", "1");
+                return new Tuple<bool, string>(false, GameTexts.FindText("str_invalid_name", "1").ToString());
+
             }
             else if (name.StartsWith(" ") || name.EndsWith(" "))
             {
-                result = false;
-                text = GameTexts.FindText("str_invalid_name", "2");
+                return new Tuple<bool, string>(false, GameTexts.FindText("str_invalid_name", "2").ToString());
+
             }
             else if (name.Contains("  "))
             {
-                result = false;
-                text = GameTexts.FindText("str_invalid_name", "3");
+                return new Tuple<bool, string>(false, GameTexts.FindText("str_invalid_name", "3").ToString());
+
             }
 
-            return new Tuple<bool, string>(result, text.ToString());
+            return new Tuple<bool, string>(true, string.Empty);
         }
 
         private void game_menu_town_hire_patrol_basic_on_consequence(MenuCallbackArgs args)
