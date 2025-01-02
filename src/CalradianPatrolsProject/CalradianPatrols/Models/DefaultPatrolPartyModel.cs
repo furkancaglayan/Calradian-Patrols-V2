@@ -16,15 +16,15 @@ namespace CalradianPatrols.Models
         public override int Tier1PatrolPartyIdealSize => Settings.GetInstance().AveragePartySize;
         public override int MaximumCustomGarrisonPartySize => Settings.GetInstance().MaxPartySizeFromGarrison;
         public override int MinimumCustomGarrisonPartySize => 12;
-        public override float GetAttackScoreforBanditParty(MobileParty party, PatrolPartyComponent patrolPartyComponent, MobileParty banditParty)
+        public override float GetAttackScoreforParty(MobileParty party, PatrolPartyComponent patrolPartyComponent, MobileParty enemyParty)
         {
             var aggressiveness = GetPatrolPartyAggressiveness(party);
-            var strengthFactor = Math.Max(banditParty.GetTotalStrengthWithFollowers() - party.Party.TotalStrength, 0f);
+            var strengthFactor = Math.Max(enemyParty.GetTotalStrengthWithFollowers() - party.Party.TotalStrength, 0f);
             
-            var banditMultiplier = banditParty.ActualClan.StringId == CampaignData.Looters ? 0.9f : 1.2f;
-            var distance = Campaign.Current.Models.MapDistanceModel.GetDistance(party, banditParty);
+            var multiplier = enemyParty.IsBandit ? (enemyParty.ActualClan.StringId == CampaignData.Looters ? 0.9f : 1.2f) : 0.7f;
+            var distance = Campaign.Current.Models.MapDistanceModel.GetDistance(party, enemyParty);
 
-            return banditMultiplier * (strengthFactor + aggressiveness - 0.5f) + ( 1 / (distance * distance));
+            return multiplier * (strengthFactor + aggressiveness - 0.5f) + ( 1 / (distance * distance));
         }
 
         public override bool CanNPCClanRecruitPartyForTown(Clan clan, Town town)

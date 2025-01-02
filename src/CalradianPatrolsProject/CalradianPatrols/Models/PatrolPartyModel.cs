@@ -19,7 +19,7 @@ namespace CalradianPatrols.Models
         public abstract float GetNPCSettlementHirePatrolPartyChance(Settlement settlement);
         public abstract bool GetIsRosterStatusGoodForHunting(MobileParty party);
         public abstract int GetMaxAmountOfPartySizePerSettlement(Clan clan, Settlement settlement);
-        public abstract float GetAttackScoreforBanditParty(MobileParty party, PatrolPartyComponent patrolPartyComponent, MobileParty banditParty);
+        public abstract float GetAttackScoreforParty(MobileParty party, PatrolPartyComponent patrolPartyComponent, MobileParty banditParty);
         public abstract int GetGoldCostForPatrolParty(Settlement currentSettlement);
         public abstract bool CanNPCClanRecruitPartyForTown(Clan clan, Town town);
     }

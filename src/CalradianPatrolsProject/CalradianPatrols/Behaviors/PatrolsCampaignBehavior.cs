@@ -535,28 +535,42 @@ namespace CalradianPatrols.Behaviors
             {
                 while (mobileParty != null)
                 {
-                    if (mobileParty.IsBandit && mobileParty.IsActive && mobileParty.CurrentSettlement == null && !mobileParty.IsCurrentlyUsedByAQuest)
+                    if (mobileParty.IsActive && mobileParty.CurrentSettlement == null && !mobileParty.IsCurrentlyUsedByAQuest)
                     {
-                        if (mobileParty.MapEvent != null &&
-                            mobileParty.MapEvent.EventType == MapEvent.BattleTypes.FieldBattle &&
-                            mobileParty.MapEvent.DefenderSide != mobileParty.MapEventSide &&
-                            mobileParty.MapEvent.DefenderSide.LeaderParty != null &&
-                            mobileParty.MapEvent.DefenderSide.LeaderParty.IsMobile &&
+                        if (mobileParty.IsBandit)
+                        {
+                            if (mobileParty.MapEvent != null &&
+                           mobileParty.MapEvent.EventType == MapEvent.BattleTypes.FieldBattle &&
+                           mobileParty.MapEvent.DefenderSide != mobileParty.MapEventSide &&
+                           mobileParty.MapEvent.DefenderSide.LeaderParty != null &&
+                           mobileParty.MapEvent.DefenderSide.LeaderParty.IsMobile &&
 
-                            ((mobileParty.MapEvent.DefenderSide.LeaderParty.MobileParty.PartyComponent is
-                            PatrolPartyComponent && mobileParty.MapEvent.DefenderSide.LeaderParty.MobileParty.ActualClan == party.ActualClan) ||
-                            mobileParty.MapEvent.DefenderSide.LeaderParty.MobileParty.IsVillager ||
-                            mobileParty.MapEvent.DefenderSide.LeaderParty.MobileParty.IsCaravan))
-                        {
-                            selectedTarget = mobileParty;
-                            break;
-                        }
-                        else
-                        {
-                            var attackScore = Model.GetAttackScoreforBanditParty(party, patrolPartyComponent, mobileParty) + MBRandom.RandomFloatRanged(-0.3f, 0.3f);
-                            if (attackScore > bestAttackScore)
+                           ((mobileParty.MapEvent.DefenderSide.LeaderParty.MobileParty.PartyComponent is
+                           PatrolPartyComponent comp && comp.RulerClan.MapFaction == patrolPartyComponent.RulerClan.MapFaction) ||
+                           mobileParty.MapEvent.DefenderSide.LeaderParty.MobileParty.IsVillager ||
+                           mobileParty.MapEvent.DefenderSide.LeaderParty.MobileParty.IsCaravan))
                             {
                                 selectedTarget = mobileParty;
+                                break;
+                            }
+                            else
+                            {
+                                var attackScore = Model.GetAttackScoreforParty(party, patrolPartyComponent, mobileParty) + MBRandom.RandomFloatRanged(-0.3f, 0.3f);
+                                if (attackScore > bestAttackScore)
+                                {
+                                    selectedTarget = mobileParty;
+                                    bestAttackScore = attackScore;
+                                }
+                            }
+                        }
+                        else if ((mobileParty.IsCaravan || mobileParty.IsVillager) && mobileParty.MapFaction.IsAtWarWith(patrolPartyComponent.RulerClan.MapFaction) 
+                            && (mobileParty.MapEvent == null || (mobileParty.MapEvent.AttackerSide.LeaderParty != null && mobileParty.MapEvent.AttackerSide.LeaderParty.IsMobile && mobileParty.MapEvent.AttackerSide.LeaderParty.MapFaction != null &&
+                            mobileParty.MapEvent.AttackerSide.LeaderParty.MapFaction == patrolPartyComponent.RulerClan.MapFaction && mobileParty.MapEvent.IsFieldBattle)))
+                        {
+                            var attackScore = Model.GetAttackScoreforParty(party, patrolPartyComponent, mobileParty) + MBRandom.RandomFloatRanged(-0.3f, 0.3f);
+                            if (attackScore > bestAttackScore)
+                            {
+                                 selectedTarget = mobileParty;
                                 bestAttackScore = attackScore;
                             }
                         }
