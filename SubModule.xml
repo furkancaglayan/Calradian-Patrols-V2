@@ -5,9 +5,9 @@
      <SingleplayerModule value="true"/>
      <MultiplayerModule value="false"/>
      <DependedModules>
-         <DependedModule Id="Native" DependentVersion = "v1.2.11"/>
-         <DependedModule Id="SandBoxCore" DependentVersion = "v1.2.11"/>
-         <DependedModule Id="Sandbox" DependentVersion = "v1.2.11"/>
+         <DependedModule Id="Native" DependentVersion = "v1.2.12"/>
+         <DependedModule Id="SandBoxCore" DependentVersion = "v1.2.12"/>
+         <DependedModule Id="Sandbox" DependentVersion = "v1.2.12"/>
      </DependedModules>
      <SubModules>
          <SubModule>
